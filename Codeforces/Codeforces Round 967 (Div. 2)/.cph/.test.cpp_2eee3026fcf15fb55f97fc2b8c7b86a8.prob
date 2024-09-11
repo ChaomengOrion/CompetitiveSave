@@ -1,0 +1,1 @@
+{"name":"Local: test","url":"e:\\Program_Dev\\Competitive\\Codeforces\\test.cpp","tests":[{"id":1723881540396,"input":"1\n13 7\nBR BR GY GR BR BR BR BR BR BR BR BG GY\n1 2\n3 1\n4 4\n1 4\n4 2\n12 11\n11 3\n\n\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\Program_Dev\\Competitive\\Codeforces\\test.cpp","group":"local","local":true}
