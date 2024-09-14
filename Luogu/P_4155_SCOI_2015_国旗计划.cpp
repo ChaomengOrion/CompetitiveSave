@@ -4,7 +4,7 @@
 using i64 = long long;
 
 #define TRACE(x) std::cout << "TRACE: " << #x << " = " << (x) << std::endl;
-#define DEBUG(...) std::cerr << "DEBUG: " << __VA_ARGS__ << std::endl;
+#define DEBUG(...) // std::cerr << "DEBUG: " << __VA_ARGS__ << std::endl;
 #define DEBUGV(vec, size) std::cerr << '['; for (int i = 0; i < size; i++) { std::cerr << vec[i]; if (i != size - 1) std::cerr << ", "; } std::cerr << ']' << std::endl;
 
 struct soldier {
@@ -31,7 +31,7 @@ void solve()
         C[N + i].l += M;
         C[N + i].r += M;
     }
-    std::cerr << '['; for (int i = 0; i < C.size(); i++) { std::cerr << '[' << C[i].l << '-' << C[i].r << ']'; if (i != C.size() - 1) std::cerr << ", "; } std::cerr << ']' << std::endl;
+    // std::cerr << '['; for (int i = 0; i < C.size(); i++) { std::cerr << '[' << C[i].l << '-' << C[i].r << ']'; if (i != C.size() - 1) std::cerr << ", "; } std::cerr << ']' << std::endl;
     // 找每一个区间的下一个最优区间，然后倍增
     int index = 0, N2 = N * 2, temp = 0;
     while ((1 << temp) <= N) temp++;
@@ -40,7 +40,7 @@ void solve()
     // go[s][i] 中s为(起点节点)，2^i为(跳的步数)
 
     for (int i = 0; i < N2; i++) {
-        while (index < N2 && C[index].l < C[i].r) index++;
+        while (index < N2 && C[index].l <= C[i].r) index++;
         go[i][0] = index - 1;
         DEBUG("go[" << i << ',' << 0 << "]: " << go[i][0]);
     }
@@ -52,7 +52,8 @@ void solve()
         }
     }
     
-    auto getAns = [&](int x) -> int {
+    std::vector<int> ansVec(N);
+    auto getAns = [&](int x) -> void {
         DEBUG("get x: " << x)
         int len = C[x].l + M, cur = x, ans = 1;
         for (int i = temp - 1; i >= 0; i--) {
@@ -63,10 +64,12 @@ void solve()
                 cur = pos;
             }
         }
-        return ans + 1;
+        DEBUG("out id: " << C[x].id)
+        ansVec[C[x].id - 1] = ans + 1;
     };
 
-    for (int i = 0; i < N; i++) std::cout << getAns(i) << ' ';
+    for (int i = 0; i < N; i++) getAns(i);
+    for (int i = 0; i < N; i++) std::cout << ansVec[i] << ' ';
     std::cout << std::endl;
 }
 
