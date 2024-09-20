@@ -1,0 +1,1 @@
+{"name":"Local: P_1616_疯狂的采药_优化dp","url":"d:\\Program_Dev\\CompetitiveSave\\Luogu\\P_1616_疯狂的采药_优化dp.cpp","tests":[{"id":1726835494662,"input":"70 3\n71 100\n69 1\n1 2\n","output":"140"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Program_Dev\\CompetitiveSave\\Luogu\\P_1616_疯狂的采药_优化dp.cpp","group":"local","local":true}
