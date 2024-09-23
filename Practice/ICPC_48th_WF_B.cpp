@@ -17,26 +17,30 @@ void solve()
             std::cin >> inputs[i][j];
         }
     }
-    std::set<int> saved;
+    std::unordered_map<int, int> saved;
     std::vector<int> cnt(n, 0);
     for (int i = n - 1; i >= 0; i--) {
-        std::set<int> seen;
+        std::unordered_map<int, int> seen;
         for (int j = 0; j < m; j++) {
             int c = inputs[i][j];
-            if (saved.contains(c)) continue;
+            if (saved.contains(c)) {
+                cnt[saved[c]]++;
+            }
             else {
-                seen.insert(c);
+                seen.insert({c, i});
                 cnt[i]++;
             }
         }
-        saved.insert(seen.begin(), seen.end());
+        for (auto a : seen) {
+            saved.insert(a);
+        }
     }
 
     i64 sum = 0;
     for (int i = 0; i < n; i++) {
         sum += cnt[i];
     }
-
+    std::cout << std::setprecision(9);
     for (int i = 0; i < n; i++) {
         std::cout << (double)cnt[i] / sum << std::endl;
     }
