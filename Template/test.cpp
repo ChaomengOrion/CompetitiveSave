@@ -8,5 +8,7 @@ void Print() {
 }
 
 int main() {
-    Print<std::string>();
+    int a = 3;
+    std::cout << (++a)++ << std::endl;
+    
 }
