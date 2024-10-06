@@ -10,6 +10,10 @@ struct node {
     int cost = -1;
 };
 
+struct task {
+    int parent, id, pre_cost, from_weight;
+};
+
 void solve()
 {
     int n, m;
@@ -21,27 +25,50 @@ void solve()
         graph[u].to.push_back({v, c});
         graph[v].to.push_back({u, c});
     }
+    graph[1].cost = 0;
 
-    std::vector<std::array<int, 3>> wait; // p id pre_cost
+    std::vector<task> p1, p2; // p id pre_cost
+
     bool flag = true;
 
-    wait.push_back({0, 1, 0});
+    std::vector<task>& pending = p1;
+    std::vector<task>& nxt = p2;
 
-    while (!wait.empty()) {
-        std::vector<std::array<int, 3>> next;
-        for (auto [p, id, pc] : wait) {
-            for (auto [nxt, c] : graph[id].to) {
-                if (nxt != p) {
-                    next.push_back({id, nxt, pc + c});
+    pending.push_back({0, 1, 0, 0});
+
+    while (!pending.empty()) {
+        flag = !flag;
+        nxt.clear();
+        nxt.reserve(n);
+        for (task t : pending) {
+            for (auto [id, weight] : graph[t.id].to) {
+                if (!(flag && id == t.parent)) {
+                    if (flag) {
+                        int cost = t.from_weight + weight;
+                        cost *= cost;
+                        cost += t.pre_cost;
+                        if (graph[id].cost == -1 || graph[id].cost > cost) {
+                            graph[id].cost = cost;
+                            nxt.push_back({t.id, id, cost, weight});
+                        } else continue;
+                    } else {
+                        nxt.push_back({t.id, id, t.pre_cost, weight});
+                    }
                 }
             }
         }
+        std::swap(pending, nxt);
     }
+
+    for (int i = 1; i <= n; i++) {
+        std::cout << graph[i].cost << ' ';
+    }
+    std::cout << std::endl;
 }
 
 int main()
 {
     std::cin.tie(nullptr)->sync_with_stdio(false);
-    int t; std::cin >> t; while (t--) solve();
+    solve();
     return 0;
 }

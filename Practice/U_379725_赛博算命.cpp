@@ -1,26 +1,29 @@
 #include <bits/stdc++.h>
-#define CFMode
-
-using i64 = long long;
-
-#define TRACE(x) std::cout << "TRACE: " << #x << " = " << (x) << std::endl;
-#define DEBUG(...) std::cerr << "DEBUG: " << __VA_ARGS__ << std::endl;
-#define DEBUGV(vec, size) std::cerr << #vec << " = " << '['; for (int i = 0; i < size; i++) { std::cerr << vec[i]; if (i != size - 1) std::cerr << ", "; } std::cerr << ']' << std::endl;
-
-const int MOD = 1E9 + 7;
-
-void solve()
-{
-
-}
-
+using namespace std;
+int MOD = 1e9 + 7;
 int main()
 {
-    std::cin.tie(nullptr)->sync_with_stdio(false);
-#ifdef CFMode
-    int t; std::cin >> t; while (t--) solve();
-#else
-    solve();
-#endif
-    return 0;
+    cin.tie(0)->sync_with_stdio(0);
+    int Q, N;
+    cin >> Q >> N;
+    vector<int> tm(Q);
+    for (int i = 0; i < Q; i++) {
+        cin >> tm[i];
+    }
+    int exp = 1 << (int)log2(N), ans = 1;
+    if (exp == N) {
+        for (int i = 0; i < Q; i++) {
+            ans = 1LL * ans * (N - (tm[i] - 1)) % MOD;
+        }
+    } else {
+        int limit = N - exp;
+        for (int i = 0; i < Q; i++) {
+            if (tm[i] > limit && tm[i] <= exp) {
+                ans = 1LL * ans * (N + 1) % MOD;
+            } else {
+                ans = 1LL * ans * (N - (tm[i] - 1)) % MOD;
+            }
+        }
+    }
+    cout << ans << '\n';
 }

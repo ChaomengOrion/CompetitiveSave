@@ -1,11 +1,32 @@
-#include <bits/stdc++.h>
+#include <cmath>
+#include <iostream>
 
 using namespace std;
-#define DEBUGV(vec, size) std::cerr << #vec << " = " << '['; for (int i = 0; i < size; i++) { std::cerr << vec[i]; if (i != size - 1) std::cerr << ", "; } std::cerr << ']' << std::endl;
+int q, k;
+int s = 1e9 + 7;
 
 int main()
 {
-    vector<pair<int, int>> vec = {{1, 2}, {2, 4}};
+    std::cin.tie(nullptr)->sync_with_stdio(false);
+    cin >> q >> k;
+    int* st = new int[q + 1];
+    for (int i = 1; i <= q; i++) cin >> st[i];
+    int res = 1;
+    int mi = 1 << (int)log2(k);
+    if (mi == k) {
+        for (int i = 1; i <= q; i++) {
+            res = (1LL * (k + 1 - st[i]) * res) % s;
+        }
 
-    return 0;
+    } else {
+        int contest = k - mi;
+        for (int i = 1; i <= q; i++) {
+            if (st[i] <= contest || st[i] >= k + 1 - contest) {
+                res = (1LL * (k + 1 - st[i]) * res) % s;
+            } else {
+                res = (1LL * (k + 1) * res) % s;
+            }
+        }
+    }
+    cout << res << endl;
 }
