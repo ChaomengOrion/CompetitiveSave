@@ -19,38 +19,45 @@ void solve()
     std::sort(pieces.begin(), pieces.end(), std::greater<int>());
 
     std::vector<bool> vis(N, false);
-    auto dfs = [&](auto&& dfs, int cur, int target) -> bool {
-        LOGV(vis, N)
-        for (int i = 0; i < N; i++) {
-            if (vis[i]) continue;
+    int CNT = 0;
+    auto dfs = [&](auto&& dfs, int start, int cur, int target) -> bool {
+        //LOGV(vis, N)
+        int last = -1;
+        for (int i = start; i < N; i++) {
+            if (vis[i] || (i > 0 && pieces[i] == last)) continue;
+            last = pieces[i];
             if (cur + pieces[i] < target) {
                 vis[i] = true;
-                if (dfs(dfs, cur + pieces[i], target)) {
+                if (dfs(dfs, start + 1, cur + pieces[i], target)) {
                     return true;
                 }
                 vis[i] = false;
             } else if (cur + pieces[i] == target) {
                 vis[i] = true;
-                return true;
+                CNT--;
+                if (CNT == 0 || dfs(dfs, 0, 0, target)) { // 重头找下一个
+                    return true;
+                }
+                vis[i] = false;
+                CNT++;
+                //return true;
             }
         }
         return false;
     };
-    LOGV(pieces, N)
+    //LOGV(pieces, N)
     int min = sum;
     for (int len = 1; len < sum; len++) {
         if (sum % len != 0) continue; // 剪枝掉非因数
         int L = sum / len;
         bool ok = true;
-        vis.resize(N, false);
-        while (L--) {
-            if (!dfs(dfs, 0, len)) {
-                ok = false;
-                break;
-            }
+        std::fill(vis.begin(), vis.end(), false);
+        CNT = L;
+        //LOG(len << " = " << ok)
+        if (dfs(dfs, 0, 0, len)) {
+            min = std::min(min, len);
+            break;
         }
-        LOG(len << " = " << ok)
-        if (ok) min = std::min(min, len);
     }
 
     std::cout << min << std::endl;
@@ -62,11 +69,3 @@ int main()
     solve();
     return 0;
 }
-#if 0
-, , , , , , , 28, 27, 27, 26, 26, 26, 25, 25, , , 21, 20, 19, 15, 13, 6, 3
-48 22
-47 23
-43 27
-38 32
-36 34
-#endif
