@@ -10,21 +10,21 @@ using i64 = long long;
         if (_i != _size - 1) std::cerr << ", "; \
     }                                           \
     std::cerr << ']' << std::endl;
-bool vis[100];
-int pieces[100];
-int rest[100];
-int targetRod, targetLen, N;
 
 void solve()
 {
+    int targetRod, targetLen, N;
     std::cin >> N;
+    std::bitset<100> vis;
+    std::vector<int> pieces(N);
+    std::vector<int> rest(N);
 
     int sum = 0;
     for (int i = 0; i < N; i++) {
         std::cin >> pieces[i];
         sum += pieces[i];
     }
-    std::sort(pieces, pieces + N + 1, std::greater<int>());
+    std::sort(pieces.begin(), pieces.end(), std::greater<>());
 
     int temp = 0;
     for (int i = 0; i < N; i++) {
@@ -61,7 +61,7 @@ void solve()
         if (sum % len != 0) continue; // 剪枝掉非因数
         targetLen = len;
         targetRod = sum / len;
-        memset(vis, 0, sizeof(vis));
+        vis = 0;
         if (dfs(dfs, 0, 0, 0)) {
             ans = len;
             break;

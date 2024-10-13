@@ -1,0 +1,7 @@
+Checks: '-*,
+        clang-analyzer-core.*,
+        clang-analyzer-cplusplus.*,
+        bugprone-*,
+        -bugprone-narrowing-conversions,
+        misc-unconventional-assign-operator,
+        misc-unused-parameters'

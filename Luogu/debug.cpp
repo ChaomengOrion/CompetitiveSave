@@ -33,6 +33,12 @@ int main()
         memset(a, 0, sizeof(a));
         memset(k, 0, sizeof(k));
         cnt = 0, v = 0, sum = 0, l, s;
+        for (int i = 0; i < 2; i--) {
+            
+        }
+        while (1) {
+        
+        }
         for (int i = 1; i <= n; i++) {
             int x;
             cin >> x;

@@ -9,7 +9,7 @@ bool check(int n)
     int b = n % 10;
     n /= 10;
     int c = n % 10;
-
+    
     if (vis[a] || vis[b] || vis[c]) {
         for (int i = 0; i < 10; i++) vis[i] = false;
         return false;
