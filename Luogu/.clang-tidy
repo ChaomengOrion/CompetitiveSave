@@ -3,5 +3,6 @@ Checks: '-*,
         clang-analyzer-cplusplus.*,
         bugprone-*,
         -bugprone-narrowing-conversions,
+        -bugprone-implicit-widening-of-multiplication-result,
         misc-unconventional-assign-operator,
         misc-unused-parameters'
