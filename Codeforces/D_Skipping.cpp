@@ -2,9 +2,7 @@
 
 using i64 = long long;
 
-#define LOG(...) std::cerr << "DEBUG: " << __VA_ARGS__ << std::endl;
-#define LOGV(_vec, _size) std::cerr << #_vec << " = " << '['; for (int _i = 0; _i < (_size); _i++) { std::cerr << (_vec)[_i]; if (_i != (_size) - 1) std::cerr << ", "; } std::cerr << ']' << std::endl;
-
+// 关键是注意到只需要计算到达i处最少跳过的分数
 void solve()
 {
     int N;
@@ -18,35 +16,43 @@ void solve()
         std::cin >> to[i];
     }
 
-    std::set<int> unvis;
-    for (int i = 1; i <= N; i++) {
-        unvis.emplace_hint(unvis.end(), i);
-    }
+    // 到达i处最少跳过的分数
+    std::vector<i64> wasted(N + 1, LONG_LONG_MAX);
     
-    i64 maxScore = 0;
+    // dijkstra求最短路
+    std::priority_queue<std::pair<i64, int>, std::vector<std::pair<i64, int>>, std::greater<>> pq;
 
-    auto dfs = [&](auto&& dfs, int node, i64 pre_socre) {
-        auto nit = unvis.upper_bound(node); // 取自己/前点
-        if (nit == unvis.begin()) {
-            maxScore = std::max(maxScore, pre_socre);
-            return;
+    pq.emplace(0, 1);
+    wasted[1] = 0;
+    while (!pq.empty()) {
+        // c是跳过的分数，i是索引
+        auto [c, i] = pq.top();
+        pq.pop();
+        if (wasted[i] != c) {
+            continue; // 该点已经有最小值，跳
         }
-        auto it = std::prev(nit);
-        node = *it;
-        i64 cur = pre_socre + score[node];
-        // 取点
-        unvis.erase(node);
-        dfs(dfs, node - 1, cur); // 向前找
-        unvis.emplace_hint(nit, node);
-        if (to[node] > node) { // 大于自己才考虑跳点
-            unvis.erase(node);
-            dfs(dfs, to[node], pre_socre); // 跳点
-            unvis.emplace_hint(nit, node);
+        // 向前取点
+        if (i > 1) {
+            if (wasted[i - 1] > c) {
+                wasted[i - 1] = c;
+                pq.emplace(c, i - 1); // 只考虑临近点就行，i-n的情况一定在处理i-1时处理过
+            }
         }
-    };
+        // 跳点
+        if (to[i] > i) { // 只考虑向后跳，向前必定不最优
+            c += score[i];
+            if (wasted[to[i]] > c) {
+                wasted[to[i]] = c;
+                pq.emplace(c, to[i]);
+            }
+        }
+    }
 
-    dfs(dfs, 1, 0);
-
+    i64 sum = 0, maxScore = 0;
+    for (int i = 1; i <= N; i++) {
+        sum += score[i];
+        maxScore = std::max(maxScore, sum - wasted[i]);
+    }
     std::cout << maxScore << std::endl;
 }
 
