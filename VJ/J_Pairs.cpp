@@ -16,7 +16,7 @@ void solve()
         for (int i = 0; i < N; i++) {
             if (arr[i] < 0) { // 往上找
                 int l = i + 1, r = N;
-                while (r - l > 0) {
+                while (l < r) {
                     int mid = (l + r) >> 1;
                     if (arr[i] * arr[mid] <= Mid) r = mid;
                     else l = mid + 1;
@@ -24,7 +24,7 @@ void solve()
                 cnt += N - l;
             } else { // 往下找
                 int l = i, r = N - 1;
-                while (r - l > 0) {
+                while (l < r) {
                     int mid = (l + r + 1) >> 1;
                     if (arr[i] * arr[mid] <= Mid) l = mid;
                     else r = mid - 1;
