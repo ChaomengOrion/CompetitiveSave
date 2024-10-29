@@ -27,7 +27,7 @@ void solve()
 
     auto query = [&](i64 p) -> i64 {
         if (p == 0) return 0;
-        int start = (int)(N + 1.5 - sqrtl((N + 1.5) * (N + 1.5) - 2 * (N + p)));
+        int start = (int)(N + 1.5 - sqrt((N + 1.5) * (N + 1.5) - 2 * (N + p)));
         i64 startPos = (i64)(-1LL * start * start / 2.0 + (N + 1.5) * start - N);
         return rangePre[start - 1] + sum(start, (int)(p - startPos + start));
     };
