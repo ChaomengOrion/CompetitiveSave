@@ -10,13 +10,14 @@ void solve()
     for (int i = 0; i < N; i++) {
         std::cin >> arr[i];
     }
-    std::vector<i64> pre1(N + 1), pre2(N + 1);
+    std::vector<int> pre1(N + 1);
+    std::vector<i64> pre2(N + 1);
     for (int i = 1; i <= N; i++) {
         pre1[i] = pre1[i - 1] + arr[i - 1];
-        pre2[i] = pre2[i - 1] + i * arr[i - 1];
+        pre2[i] = pre2[i - 1] + 1LL * i * arr[i - 1];
     }
     auto sum = [&](int k, int end) -> i64 {
-        return (end + 1) * (pre1[end] - pre1[k - 1]) - (pre2[end] - pre2[k - 1]);
+        return 1LL * (end + 1) * (pre1[end] - pre1[k - 1]) - (pre2[end] - pre2[k - 1]);
     };
 
     std::vector<i64> rangePre(N + 1);
@@ -24,22 +25,17 @@ void solve()
         rangePre[i] = rangePre[i - 1] + sum(i, N);
     }
 
-    std::vector<i64> startPos(N + 1);
-    startPos[1] = 1;
-    for (int i = 1; i <= N - 1; i++) {
-        startPos[i + 1] = startPos[i] + (N - i + 1);
-    }
-
-    auto query = [&](int p) -> i64 {
+    auto query = [&](i64 p) -> i64 {
         if (p == 0) return 0;
-        int start = prev(std::upper_bound(startPos.begin(), startPos.end(), p)) - startPos.begin();
-        return rangePre[start - 1] + sum(start, p - startPos[start] + start);
+        int start = (int)(N + 1.5 - sqrtl((N + 1.5) * (N + 1.5) - 2 * (N + p)));
+        i64 startPos = (i64)(-1LL * start * start / 2.0 + (N + 1.5) * start - N);
+        return rangePre[start - 1] + sum(start, (int)(p - startPos + start));
     };
 
     int Q;
-    std::cin >> Q;
+    std::cin >> Q; 
     while (Q--) {
-        int l, r;
+        i64 l, r;
         std::cin >> l >> r;
         std::cout << query(r) - query(l - 1) << std::endl;
     }
