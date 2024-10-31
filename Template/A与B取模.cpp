@@ -2,15 +2,15 @@
 
 using i64 = long long;
 
-i64 add(i64 a, i64 b, i64 p) {
+i64 add(i64 a, i64 b, i64 p) { // 加
     return (a % p + b % p) % p;
 }
 
-i64 sub(i64 a, i64 b, i64 p) {
+i64 sub(i64 a, i64 b, i64 p) { // 减
     return (a % p - b % p) % p;
 }
 
-i64 mul(i64 a, i64 b, i64 p) { // a > p
+i64 mul(i64 a, i64 b, i64 p) { // a > p 乘
     a %= p;
     b %= p;
     i64 ans = 0;

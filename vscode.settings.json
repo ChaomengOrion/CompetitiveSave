@@ -6,7 +6,7 @@
     "leetcode.defaultLanguage": "cpp",
     "leetcode.hint.commentDescription": false,
     "leetcode.hint.configWebviewMarkdown": false,
-    "backgroundCover.opacity": 0.3,
+    "backgroundCover.opacity": 0.2,
     "editor.lineHeight": 1.6,
     "editor.fontLigatures": true,
     "editor.codeLensFontFamily": "Consolas",
@@ -35,8 +35,8 @@
         // 建议风格：打包(重载函数只会给出一个建议）
         // 相反可以设置为detailed
         "--completion-style=bundled",
-        // 允许补充头文件
-        "--header-insertion=iwyu",
+        // 不允许补充头文件
+        "--header-insertion=never",
         // 输入建议中，已包含头文件的项与还未包含头文件的项会以圆点加以区分
         "--header-insertion-decorators",
         // 在后台自动分析文件(基于 complie_commands，我们用CMake生成)
@@ -56,15 +56,11 @@
         "--compile-commands-dir=build"
     ],
     "workbench.colorTheme": "Material Theme Darker High Contrast",
-    "cph.language.cpp.Args": "-Wall -Wextra -g3 -std=c++17 -O2",
-    "c-cpp-compile-run.cpp-flags": "-Wall -Wextra -g3 -std=c++17 -O2",
+    "cph.language.cpp.Args": "-Wall -Wextra -g3 -std=c++17 -O2 -D_GLIBCXX_DEBUG",
+    "c-cpp-compile-run.cpp-flags": "-Wall -Wextra -g3 -std=c++17 -O2 -D_GLIBCXX_DEBUG",
     "C_Cpp.intelliSenseEngine": "disabled",
     "terminal.external.windowsExec": "E:\\Software_Program\\PowerShell\\7-preview\\pwsh.exe",
-    "editor.minimap.showSlider": "always",
-    "animations.Install-Method": "Apc Customize UI++",
-    "apc.imports": [
-        "file:///c:/Users/21988/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.3/dist/updateHandler.js"
-    ],
+    "animations.Install-Method": "Custom CSS and JS",
     "editor.cursorBlinking": "smooth",
     "editor.cursorWidth": 3,
     "github.copilot.enable": {
@@ -74,7 +70,7 @@
         "scminput": false
     },
     "codesnap.showWindowTitle": true,
-    "terminal.integrated.fontFamily": "FiraCode Nerd Font",
+    "terminal.integrated.fontFamily": "FiraCode Nerd Font", // 内置终端字体
     "terminal.integrated.profiles.windows": {
         "PowerShell 7": {
             "path": "E:\\Software_Program\\PowerShell\\7-preview\\pwsh.exe",
@@ -83,7 +79,80 @@
             ]
         }
     },
-    "terminal.integrated.defaultProfile.windows": "PowerShell 7",
+    "terminal.integrated.defaultProfile.windows": "PowerShell 7", // 内置终端方案
     "python.defaultInterpreterPath": "E:\\Env\\pythonEnv\\py313\\python.exe",
+    "editor.minimap.showSlider": "always",
     "editor.guides.bracketPairs": "active",
+    "workbench.colorCustomizations": {
+        "editor.lineHighlightBackground": "#000000cc" // 设置选中的高亮行颜色
+    },
+    "editor.renderLineHighlight": "all", // 高亮覆盖整行
+    "vscode_custom_css.imports": [
+        "file:///c:/Users/21988/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.4/dist/updateHandler.js"
+    ],
+    "latex-workshop.formatting.latex": "latexindent",
+    "latex-workshop.latex.tools": [
+        {
+            // 编译工具和命令
+            "name": "xelatex",
+            "command": "xelatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "-shell-escape",
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "%DOCFILE%"
+            ]
+        }
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "xelatex",
+            "tools": [
+                "xelatex"
+            ],
+        },
+        {
+            "name": "pdflatex",
+            "tools": [
+                "pdflatex"
+            ]
+        },
+        {
+            "name": "xe->bib->xe->xe",
+            "tools": [
+                "xelatex",
+                "bibtex",
+                "xelatex",
+                "xelatex"
+            ]
+        },
+        {
+            "name": "pdf->bib->pdf->pdf",
+            "tools": [
+                "pdflatex",
+                "bibtex",
+                "pdflatex",
+                "pdflatex"
+            ]
+        }
+    ],
 }
