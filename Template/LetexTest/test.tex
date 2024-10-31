@@ -1,0 +1,44 @@
+\documentclass[a4paper, 10pt]{paper}
+
+\usepackage[UTF8]{ctex}
+\usepackage{geometry}
+\usepackage{minted}
+\usepackage{fontspec}
+
+\geometry{a4paper, scale=0.8}
+\setmonofont[Path=C:/Users/21988/AppData/Local/Microsoft/Windows/Fonts/]{JetBrainsMono-Medium.ttf}
+\usemintedstyle{autumn}
+\setminted{fontsize=\small, breaklines=true, breakautoindent=true}
+
+\begin{document}
+
+    \title{My First Document}
+    \author{My Name}
+    \date{\today}
+    \maketitle
+
+    \pagenumbering{roman}
+    \tableofcontents
+    \newpage
+    \pagenumbering{arabic}
+
+    \section{Introduction}
+    This is the introduction. ?!
+
+    \section{Methods}
+
+        \subsection{Stage 1}
+        \label{sec1} The first part of the methods.
+
+        \subsection{Stage 2}
+        \label{sec2} The second part of the methods.
+
+    \section{Results}
+    Here are my results. Referring to section \ref{sec2} on page \pageref{sec1}
+
+中文测试
+
+\inputminted[frame=single, linenos=true]{cpp}{../ST.cpp}
+\inputminted[frame=single, linenos=true]{cpp}{../dijkstra.cpp}
+
+\end{document}

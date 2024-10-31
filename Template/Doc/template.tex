@@ -1,0 +1,204 @@
+\documentclass[a4paper, 10pt]{paper}
+
+\usepackage[UTF8]{ctex}
+\usepackage{geometry}
+\usepackage{minted}
+\usepackage{fontspec}
+\usepackage{color}
+
+\newcommand{\cpp}[1]{\inputminted[frame=single, linenos=true]{cpp}{#1}}
+
+\geometry{a4paper, scale=0.8}
+\setmonofont[Path=C:/Users/21988/AppData/Local/Microsoft/Windows/Fonts/]{JetBrainsMono-Medium.ttf}
+\usemintedstyle{autumn}
+\setminted{fontsize=\small, breaklines=true, breakautoindent=true}
+
+\begin{document}
+
+    \title{算法竞赛模板}
+    \author{by ChaomengOrion}
+    \maketitle
+    {\color{cyan}最后修改于\underline{\today}}
+
+    \tableofcontents
+
+    \section{前期准备}
+        \subsection{cpp文件一键编译测试}
+        Windows - \textbf{build.bat}
+        \inputminted[frame=single, linenos=true]{bat}{../build.bat}
+
+        \subsection{cpp模板}
+        注意题目是不是多组样例
+        \cpp{../template.cpp}
+
+    \section{算法}
+        \subsection{素数筛}
+        \begin{minted}[frame=single, linenos=true]{cpp}
+bool isPrime(int num)
+{
+    if (num == 1) return 0;
+    if (num == 2 || num == 3) return 1;
+    if (num % 6 != 1 && num % 6 != 5) return 0;
+    int tmp = sqrt(num);
+    for (int i = 5; i <= tmp; i += 6)
+        if (num % i == 0 || num % (i + 2) == 0) return 0;
+    return 1;
+}
+        \end{minted}
+
+        \subsection{二维差分}
+        \begin{minted}[frame=single, linenos=true]{cpp}
+void best()
+{
+    int N, M; std::cin >> N >> M;
+    std::vector map(N + 1, std::vector<int>(N + 1, 0));
+    std::vector diff(N + 2, std::vector<int>(N + 2, 0));
+    for (int i = 1; i <= N; i++) for (int j = 1; j <= N; j++) std::cin >> map[i][j];
+
+    while (M--) {
+        int x1, x2, y1, y2;
+        std::cin >> x1 >> y1 >> x2 >> y2;
+        diff[x1][y1]++;
+        diff[x1][y2 + 1]--;
+        diff[x2 + 1][y1]--;
+        diff[x2 + 1][y2 + 1]++;
+    }
+//  修改
+//  ###+@@@-
+//  ###@@@@#
+//  ###-###+
+    for (int i = 1; i <= N; i++)
+        for (int j = 1; j <= N; j++)
+            diff[i][j] += diff[i - 1][j];
+
+    for (int i = 1; i <= N; i++)
+        for (int j = 1; j <= N; j++)
+            diff[i][j] += diff[i][j - 1];
+
+    for (int i = 1; i <= N; i++) {
+        for (int j = 1; j <= N; j++) {
+            std::cout << diff[i][j] + map[i][j] << ' ';
+        }
+        std::cout << '\n';
+    }
+}
+        \end{minted}
+
+        \subsection{并查集}
+        \begin{minted}[frame=single, linenos=true]{cpp}
+        void solve()
+        {
+            int N, M;
+            std::cin >> N >> M;
+            std::vector<int> fa(N + 1);
+            for (int i = 0; i <= N; i++) {
+                fa[i] = i;
+            }
+            auto find = [&](auto&& find, int x) -> int {
+                return x == fa[x] ? x : fa[x] = find(find, fa[x]);
+            };
+        
+            while (M--) {
+                int Z, X, Y;
+                std::cin >> Z >> X >> Y;
+                if (Z == 1) {
+                    fa[find(find, Y)] = fa[find(find, X)];
+                } else if (Z == 2) {
+                    std::cout << (fa[find(find, Y)] == fa[find(find, X)] ? 'Y' : 'N') << std::endl;
+                }
+            }
+        }
+        \end{minted}
+
+        \subsection{最短路(Dijkstra)}
+        \begin{minted}[frame=single, linenos=true]{cpp}
+void solve()
+{
+    int N, M, S; // 点 边 出发点
+    std::cin >> N >> M >> S;
+    std::vector<std::vector<std::pair<int, int>>> graph(N + 1);
+    for (int i = 0; i < M; i++) {
+        int u, v, len;
+        std::cin >> u >> v >> len;
+        graph[u].emplace_back(v, len);
+        //graph[v].to.emplace_back(u, len);
+    }
+
+    std::priority_queue<std::pair<int, int>, std::vector<std::pair<int, int>>, std::greater<>> pq;
+    std::vector<int> dis(N + 1, INT_MAX);
+    dis[S] = 0;
+    pq.emplace(0, S);
+    while(!pq.empty()) {
+        auto [d, i] = pq.top();
+        pq.pop();
+        if (d != dis[i]) continue;
+
+        for (auto [nid, cost] : graph[i]) {
+            if (dis[nid] > dis[i] + cost) {
+                dis[nid] = dis[i] + cost;
+                pq.emplace(dis[nid], nid);
+            }
+        }
+    }
+
+    for (int i = 1; i <= N; i++) {
+        std::cout << dis[i] << ' ';
+    }
+}
+        \end{minted}
+        
+    \section{数据结构}
+        \subsection{树状数组}
+        \cpp{../tree_array.cpp}
+
+        \subsection{ST表}
+        \cpp{../ST.cpp}
+
+    \section{数学相关}
+        \subsection{模运算}
+        \begin{minted}[frame=single, linenos=true]{cpp}
+i64 add(i64 a, i64 b, i64 p) { // 加
+    return (a % p + b % p) % p;
+}
+
+i64 sub(i64 a, i64 b, i64 p) { // 减
+    return (a % p - b % p) % p;
+}
+
+i64 mul(i64 a, i64 b, i64 p) { // a > p 乘
+    a %= p;
+    b %= p;
+    i64 ans = 0;
+    while (b > 0) {
+        if (b & 1) {
+            ans += a;
+            ans %= p;
+        }
+        a <<= 1;
+        a %= p;
+        b >>= 1;
+    }
+    return ans;
+}
+        \end{minted}
+
+    \section{杂项}
+        \subsection{快速读入}
+        \begin{minted}[frame=single, linenos=true]{cpp}
+inline int read()
+{
+    int x = 0, sgn = 1;
+    char ch = getchar();
+    while (ch < '0' || ch > '9') {
+        if (ch == '-') sgn = -1;
+        ch = getchar();
+    }
+    while (ch >= '0' && ch <= '9') {
+        x = x * 10 + ch - '0';
+        ch = getchar();
+    }
+    return x * sgn;
+}
+        \end{minted}
+
+\end{document}

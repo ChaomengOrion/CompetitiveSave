@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{p}{@}\PYG{k}{echo} off
+\PYG{k}{set} \PYG{n+nv}{exe}\PYG{p}{=}.\PYGZbs{}output\PYGZbs{}\PYG{n+nv}{\PYGZpc{}\PYGZti{}n1}.exe
+\PYG{k}{if} \PYG{k}{not} \PYG{k}{exist} output \PYG{k}{mkdir} output
+g++ \PYG{n+nv}{\PYGZpc{}1} \PYGZhy{}o \PYG{n+nv}{\PYGZpc{}exe\PYGZpc{}} \PYGZhy{}std=c++17 \PYGZhy{}Wall \PYGZhy{}Wextra \PYGZhy{}g3 \PYGZhy{}O2 \PYGZhy{}D\PYGZus{}GLIBCXX\PYGZus{}DEBUG \PYG{p}{\PYGZam{}\PYGZam{}} \PYG{p}{(}
+    \PYG{k}{echo} [build done to \PYG{n+nv}{\PYGZpc{}exe\PYGZpc{}}]
+    \PYG{n+nv}{\PYGZpc{}exe\PYGZpc{}}
+\PYG{p}{)}
+\end{Verbatim}
