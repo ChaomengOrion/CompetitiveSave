@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.10.30)  31 OCT 2024 19:36
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.10.30)  2 NOV 2024 12:17
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -553,13 +553,13 @@ LaTeX Font Warning: Font shape `TU/JetBrainsMono-Medium.ttf(0)/m/it' undefined
 [1
 
 
-])
+]) (./_minted-template/FB4D52A01C7CA91F78C11B4142E27EF4A2789B41F9F5EDC689D26AF0848F2698.pygtex)
 \openout3 = `template.pyg'.
 
- (./_minted-template/922DD549A75A2A087A16F2CF1E627384D08AEF7AC69A6AE6D28204C7A039EB16.pygtex)
+ (./_minted-template/922DD549A75A2A087A16F2CF1E627384D08AEF7AC69A6AE6D28204C7A039EB16.pygtex [2])
 \openout3 = `template.pyg'.
 
- (./_minted-template/BC186BC5D49304DCF7A6626F3E16B087D08AEF7AC69A6AE6D28204C7A039EB16.pygtex [2]
+ (./_minted-template/BC186BC5D49304DCF7A6626F3E16B087D08AEF7AC69A6AE6D28204C7A039EB16.pygtex
 
 LaTeX Font Warning: Font shape `TU/FangSong(0)/m/it' undefined
 (Font)              using `TU/FangSong(0)/m/n' instead on input line 17.
@@ -567,23 +567,29 @@ LaTeX Font Warning: Font shape `TU/FangSong(0)/m/it' undefined
 )
 \openout3 = `template.pyg'.
 
-runsystem(pygmentize -l "cpp" -f latex -P commandprefix=PYG -F tokenmerge -P stripnl="False" -o _minted-template/2F3FAC09B316465C57104A880380F0D2D08AEF7AC69A6AE6D28204C7A039EB16.pygtex template.pyg)...executed.
+runsystem(pygmentize -l "cpp" -f latex -P commandprefix=PYG -F tokenmerge -P stripnl="False" -o _minted-template/C4D1845B4A7380F92193B73A01D3B392D08AEF7AC69A6AE6D28204C7A039EB16.pygtex template.pyg)...executed.
 
- (./_minted-template/2F3FAC09B316465C57104A880380F0D2D08AEF7AC69A6AE6D28204C7A039EB16.pygtex [3])
+ (./_minted-template/C4D1845B4A7380F92193B73A01D3B392D08AEF7AC69A6AE6D28204C7A039EB16.pygtex [3])
 \openout3 = `template.pyg'.
 
- (./_minted-template/C16A4887938589BA131BCC58657712E5D08AEF7AC69A6AE6D28204C7A039EB16.pygtex) (./_minted-template/20DEA1BF5BF27838D5CC9E2DD95C1FB3971550E8AA81CCBDEA26FC59A09AF1A1.pygtex
+ (./_minted-template/C16A4887938589BA131BCC58657712E5D08AEF7AC69A6AE6D28204C7A039EB16.pygtex [4]) (./_minted-template/20DEA1BF5BF27838D5CC9E2DD95C1FB3971550E8AA81CCBDEA26FC59A09AF1A1.pygtex
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <9> on input line 4.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 4.
- [4]) (./_minted-template/050366C58F198DC6B795EA4D469D8FC2ADCC0FC9B782215B4A4B46D79CCC5BBA.pygtex [5])
+ [5])
 \openout3 = `template.pyg'.
 
- (./_minted-template/96C31B75AA00091849A4C1F729B9F370D08AEF7AC69A6AE6D28204C7A039EB16.pygtex [6])
+ (./_minted-template/5909B4AE0651F680D864DE1D2DEA97BBD08AEF7AC69A6AE6D28204C7A039EB16.pygtex [6]) (./_minted-template/A1C4568532D7604EE2F3325F312FDD6AADCC0FC9B782215B4A4B46D79CCC5BBA.pygtex)
 \openout3 = `template.pyg'.
 
- (./_minted-template/FBF4240838CDD745B15B5EF18FF355FED08AEF7AC69A6AE6D28204C7A039EB16.pygtex) [7] (./template.aux)
+ (./_minted-template/96C31B75AA00091849A4C1F729B9F370D08AEF7AC69A6AE6D28204C7A039EB16.pygtex [7])
+\openout3 = `template.pyg'.
+
+ (./_minted-template/FBF4240838CDD745B15B5EF18FF355FED08AEF7AC69A6AE6D28204C7A039EB16.pygtex)
+runsystem(del _minted-template\2F3FAC09B316465C57104A880380F0D2D08AEF7AC69A6AE6D28204C7A039EB16.pygtex)...executed.
+
+ [8] (./template.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2022/07/14>
@@ -596,12 +602,12 @@ runsystem(del template.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 11161 strings out of 474773
- 291551 string characters out of 5759508
+ 11178 strings out of 474773
+ 293072 string characters out of 5759508
  1946842 words of memory out of 5000000
- 33083 multiletter control sequences out of 15000+600000
+ 33094 multiletter control sequences out of 15000+600000
  562831 words of font info for 95 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  93i,8n,97p,744b,757s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on template.pdf (7 pages).
+Output written on template.pdf (8 pages).
