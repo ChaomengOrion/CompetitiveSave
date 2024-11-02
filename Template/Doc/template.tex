@@ -23,15 +23,18 @@
     \tableofcontents
 
     \section{前期准备}
-        \subsection{cpp文件一键编译测试}
+        \subsection{Cpp文件一键编译测试}
         Windows - \textbf{build.bat}
         \inputminted[frame=single, linenos=true]{bat}{../build.bat}
 
-        \subsection{cpp模板}
+        \subsection{Cpp模板}
         注意题目是不是多组样例
         \cpp{../template.cpp}
 
     \section{算法}
+        \subsection{快速幂}
+        \cpp{../快速幂.cpp}
+
         \subsection{素数筛}
         \begin{minted}[frame=single, linenos=true]{cpp}
 bool isPrime(int num)
@@ -86,28 +89,28 @@ void best()
 
         \subsection{并查集}
         \begin{minted}[frame=single, linenos=true]{cpp}
-        void solve()
-        {
-            int N, M;
-            std::cin >> N >> M;
-            std::vector<int> fa(N + 1);
-            for (int i = 0; i <= N; i++) {
-                fa[i] = i;
-            }
-            auto find = [&](auto&& find, int x) -> int {
-                return x == fa[x] ? x : fa[x] = find(find, fa[x]);
-            };
-        
-            while (M--) {
-                int Z, X, Y;
-                std::cin >> Z >> X >> Y;
-                if (Z == 1) {
-                    fa[find(find, Y)] = fa[find(find, X)];
-                } else if (Z == 2) {
-                    std::cout << (fa[find(find, Y)] == fa[find(find, X)] ? 'Y' : 'N') << std::endl;
-                }
-            }
+void solve()
+{
+    int N, M;
+    std::cin >> N >> M;
+    std::vector<int> fa(N + 1);
+    for (int i = 0; i <= N; i++) {
+        fa[i] = i;
+    }
+    auto find = [&](auto&& find, int x) -> int {
+        return x == fa[x] ? x : fa[x] = find(find, fa[x]);
+    };
+
+    while (M--) {
+        int Z, X, Y;
+        std::cin >> Z >> X >> Y;
+        if (Z == 1) {
+            fa[find(find, Y)] = fa[find(find, X)];
+        } else if (Z == 2) {
+            std::cout << (fa[find(find, Y)] == fa[find(find, X)] ? 'Y' : 'N') << std::endl;
         }
+    }
+}
         \end{minted}
 
         \subsection{最短路(Dijkstra)}
@@ -150,6 +153,46 @@ void solve()
     \section{数据结构}
         \subsection{树状数组}
         \cpp{../tree_array.cpp}
+        实现区间查询区间修改
+        \begin{minted}[frame=single, linenos=true]{cpp}
+void solve()
+{
+    int N, M;
+    std::cin >> N >> M;
+    std::vector<int> diff(N + 1, 0);
+    std::vector<i64> diff2(N + 1, 0);
+    int last = 0;
+    for (int i = 1; i <= N; i++) {
+        int temp;
+        std::cin >> temp;
+        diff[i] = temp - last;
+        diff2[i] = 1LL * (i - 1) * diff[i];
+        last = temp;
+    }
+
+    TreeArray<int> tr1(diff);
+    TreeArray<i64> tr2(diff2);
+    // pre[i] = k*Σ(D[i]) - Σ((i-1)*D[i])
+    while (M--) {
+        int op;
+        std::cin >> op;
+        if (op == 1) {
+            int x, y, k;
+            std::cin >> x >> y >> k;
+            tr1.add(x, k);
+            tr1.add(y + 1, -k);
+            tr2.add(x, 1LL * (x - 1) * k);
+            tr2.add(y + 1, -1LL * y * k);
+        } else if (op == 2) {
+            int x, y;
+            std::cin >> x >> y;
+            i64 sum1 = 1LL * y * tr1.query(y) - tr2.query(y);
+            i64 sum2 = 1LL * (x - 1) * tr1.query(x - 1) - tr2.query(x - 1);
+            std::cout << sum1 - sum2 << std::endl;
+        }
+    }
+}
+        \end{minted}
 
         \subsection{ST表}
         \cpp{../ST.cpp}
