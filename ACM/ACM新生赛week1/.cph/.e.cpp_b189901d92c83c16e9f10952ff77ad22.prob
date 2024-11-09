@@ -1,0 +1,1 @@
+{"name":"Local: e","url":"d:\\ACM\\e.cpp","tests":[{"id":1730609542894,"input":"5 3\nabcde\n1 3\n5 5\n4 4","output":""},{"id":1730610208004,"input":"5 4\nacbed\n5 5\n2 3\n1 3\n4 4","output":""},{"id":1730610310123,"input":"2 3\naaaa\n1 1\n1 2\n2 2","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\ACM\\e.cpp","group":"local","local":true}

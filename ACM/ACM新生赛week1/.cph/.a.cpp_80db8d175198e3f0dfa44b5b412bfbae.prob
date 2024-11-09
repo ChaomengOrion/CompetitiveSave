@@ -1,0 +1,1 @@
+{"name":"Local: a","url":"d:\\ACM\\a.cpp","tests":[{"id":1730614980788,"input":"3\n0 1 0 -5\n2 1 1 3\n-3 2 -1 1","output":""},{"id":1730615053571,"input":"2\n-1 0 2 3\n4 5 6 7","output":""},{"id":1730615340394,"input":"1\n-1 0 1 0","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\ACM\\a.cpp","group":"local","local":true}
