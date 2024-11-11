@@ -1,0 +1,1 @@
+{"name":"Local: P1205","url":"d:\\Program_Dev\\CompetitiveSave\\Luogu\\P1205.py","tests":[{"id":1731311581936,"input":"3\n@-@\n---\n@@-\n@-@\n@--\n--@","output":"1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Program_Dev\\CompetitiveSave\\Luogu\\P1205.py","group":"local","local":true}

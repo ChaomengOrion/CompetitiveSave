@@ -37,21 +37,7 @@ def five(n, arr, copyarr):
     elif three(n, array, copyarr): return True
     else: return False
 
-def inp():
-    r = str()
-    try:
-        while True:
-            c = sys.stdin.read(1)
-            if c not in ['\r', '\n']:
-                r += c
-            elif c == '\r':
-                sys.stdin.read(1)
-                break
-            else:
-                break
-    finally:
-        print(r)
-        return r
+inp = lambda : sys.stdin.readline().strip()
 
 n = int(inp())
 arr = []
@@ -60,12 +46,11 @@ for i in range(n):
 copyarr = []
 for i in range(n):
     copyarr.append(list(inp()))
-#print(arr)
-#print(copyarr)
-if arr == copyarr: print(6)
-elif one(n, arr, copyarr): print(1)
+
+if one(n, arr, copyarr): print(1)
 elif two(n, arr, copyarr): print(2)
 elif three(n, arr, copyarr): print(3)
 elif four(n, arr, copyarr): print(4)
 elif five(n, arr, copyarr): print(5)
+elif arr == copyarr: print(6)
 else: print(7)
