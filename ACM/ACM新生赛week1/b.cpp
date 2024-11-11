@@ -21,22 +21,22 @@ void solve() {
                 jmpcnt++;
                 continue;
             }
-            while (!dq.empty() && ranges[dq.back()].second > ranges[i].second) {
+            while (!dq.empty() && ranges[dq.back()].second >= ranges[i].second) {
                 dq.pop_back();
             }
             dq.push_back(i);
             if (i - jmpcnt + 1 >= M) {
-                while (!dq.empty() && dq.front() <= i - M - jmpcnt) {
+                while (!dq.empty() && dq.front() <= i - jmpcnt - M) {
                     dq.pop_front();
                 }
                 //std::cout << i << ": " << ranges[i].first << " | " << ranges[dq.front()].second << " [back:] " << ranges[dq.back()].second << std::endl;
                 if (ranges[dq.front()].second - ranges[i].first >= mid) {
-                    //std::cout << "TR" << std::endl;
+                    //std::cout << "TRUE" << std::endl;
                     return true;
                 }
             }
         }
-        //std::cout << "FLASE" << std::endl;
+        //std::cout << "FALSE" << std::endl;
         return false;
     };
 
