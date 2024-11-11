@@ -124,7 +124,7 @@ BreakBeforeBinaryOperators: None
 #   注：这里认为语句块也属于函数
  
 # 大括号的换行规则
-BreakBeforeBraces: Linux
+BreakBeforeBraces: Attach
  
 # 三元运算操作符换行位置（?和: 在新行还是尾部）
 BreakBeforeTernaryOperators: true
