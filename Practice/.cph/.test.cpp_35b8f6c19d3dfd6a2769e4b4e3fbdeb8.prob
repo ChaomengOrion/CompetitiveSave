@@ -1,1 +1,1 @@
-{"name":"Local: test","url":"d:\\Program_Dev\\CompetitiveSave\\Practice\\test.cpp","tests":[],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Program_Dev\\CompetitiveSave\\Practice\\test.cpp","group":"local","local":true}
+{"name":"Local: test","url":"d:\\Program_Dev\\CompetitiveSave\\Practice\\test.cpp","tests":[{"id":1731483049245,"input":"12321\n12333\n33233\n3","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Program_Dev\\CompetitiveSave\\Practice\\test.cpp","group":"local","local":true}
