@@ -1,9 +1,5 @@
 #include <bits/stdc++.h>
-
 using i64 = long long;
-
-#define LOG(...) std::cerr << "Line[" << __LINE__ << "]: " << __VA_ARGS__ << std::endl;
-#define LOGV(_vec, _size) std::cerr << #_vec << " = " << '['; for (int _i = 0; _i < (_size); _i++) { std::cerr << (_vec)[_i]; if (_i != (_size) - 1) std::cerr << ", "; } std::cerr << ']' << std::endl;
 
 template <class T, class Merge = std::plus<T>>
 struct BIT {
@@ -31,7 +27,7 @@ struct BIT {
     T posQuery(int i)  {
         T res = T();
         for (i += 1; i; i -= i & -i)
-            res = merge(res, t[i]);
+            res = add(res, t[i]);
         return res;
     }
 
@@ -39,27 +35,3 @@ struct BIT {
         return posQuery(r) - posQuery(l - 1);
     }
 };
-
-void solve() {
-    int N;
-    std::cin >> N;
-    std::vector<int> arr(N);
-    for (int i = 0; i < N; i++) {
-        std::cin >> arr[i];
-    }
-
-    int max = 100;
-    BIT<int> bit(max);
-    i64 sum = 0;
-    for (int i = N - 1; i >= 0; i--) {
-        bit.add(arr[i], 1);
-        sum += bit.rangeQuery(0, arr[i] - 1);
-    }
-    std::cout << sum << std::endl;
-}
-
-int main() {
-    std::cin.tie(nullptr)->sync_with_stdio(false);
-    solve();
-    return 0;
-}
