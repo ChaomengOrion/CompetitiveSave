@@ -18,10 +18,21 @@ int main() {
         nxt = &(last->next = nullptr);
     };
 
+    auto del = [&](node* p) -> void {
+        if (p->next) p->next->prev = p->prev;
+        else last = p->prev;
+        if (p->prev) p->prev->next = p->next;
+        else head = p->next;
+        delete p;
+    };
+
     add(51);
     add(3);
     add(235);
     add(-44);
+
+    del(head);
+    del(last);
 
     node* p = head;
     while (p) {
