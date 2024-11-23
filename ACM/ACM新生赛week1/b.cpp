@@ -6,44 +6,33 @@ void solve() {
     int N, K;
     std::cin >> N >> K;
     std::vector<std::pair<int, int>> ranges(N);
+    int min = INT_MAX, max = INT_MIN;
     for (int i = 0; i < N; i++) {
         std::cin >> ranges[i].first >> ranges[i].second;
+        min = std::min(min, ranges[i].first);
+        max = std::max(max, ranges[i].second);
     }
     std::sort(ranges.begin(), ranges.end());
     int M = std::max(N - K, 2);
 
     auto check = [&](int mid) -> bool {
-        //std::cout << mid << std::endl;
-        std::deque<int> dq;
-        int jmpcnt = 0;
+        std::priority_queue<int, std::vector<int>, std::greater<int>> pq;
         for (int i = 0; i < N; i++) {
-            if (ranges[i].second - ranges[i].first < mid) {
-                jmpcnt++;
-                continue;
+            if (ranges[i].second - ranges[i].first < mid) continue;
+            pq.emplace(ranges[i].second);
+            int r = ranges[i].first + mid;
+            while (!pq.empty() && pq.top() < r) {
+                pq.pop();
             }
-            while (!dq.empty() && ranges[dq.back()].second >= ranges[i].second) {
-                dq.pop_back();
-            }
-            dq.push_back(i);
-            if (i - jmpcnt + 1 >= M) {
-                while (!dq.empty() && dq.front() <= i - jmpcnt - M) {
-                    dq.pop_front();
-                }
-                //std::cout << i << ": " << ranges[i].first << " | " << ranges[dq.front()].second << " [back:] " << ranges[dq.back()].second << std::endl;
-                if (ranges[dq.front()].second - ranges[i].first >= mid) {
-                    //std::cout << "TRUE" << std::endl;
-                    return true;
-                }
-            }
+            if (pq.size() >= M) return true;
         }
-        //std::cout << "FALSE" << std::endl;
         return false;
     };
 
-    int l = 0, r = 1E9;
+    int l = 0, r = max - min;
     
     while (l < r) {
-        int mid = (l + r + 1) >> 1;
+        int mid = (0LL + l + r + 1) >> 1;
         if (check(mid)) {
             l = mid;
         } else {
