@@ -8,15 +8,34 @@ using i64 = long long;
 void solve() {
     int N;
     std::cin >> N;
-    std::string S;
-    std::cin >> S;
-    int max = 0;
-    char last = 0;
-    std::set<char> cnt;
+    std::vector<int> S(N);
     for (int i = 0; i < N; i++) {
-        if (last)
+        std::cin >> S[i];
     }
-    std::cout << max << std::endl;
+    int ans = 0;
+    int l = -1;
+    std::map<int, int> set;
+    for (int i = 0; i < N - 1; i++) {
+        if (S[i] != S[i + 1]) {
+            if (i - 1 >= 0 && S[i - 1] == S[i] && i + 2 < N && S[i + 1] == S[i + 2]) continue;
+            l = -1;
+            if (!set.empty()) set.clear();
+        } else if (!set.contains(S[i]) || set[S[i]] < l) {
+            if (l == -1) l = i;
+            set[S[i]] = i;
+            ans = std::max(ans, i + 2 - l);
+        } else if (i - 2 >= 0 && S[i - 1] == S[i - 2] && S[i - 1] != S[i]) {
+            l = set[S[i]] + 2;
+            set[S[i]] = i;
+            ans = std::max(ans, i + 2 - l);
+        } else {
+            set.clear();
+            set.emplace(S[i], i);
+            l = i;
+            ans = std::max(ans, 2);
+        }
+    }
+    std::cout << ans << std::endl;
 }
 
 int main() {
