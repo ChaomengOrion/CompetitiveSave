@@ -10,19 +10,18 @@ main:
 	.seh_pushreg	%rbp
 	movq	%rsp, %rbp
 	.seh_setframe	%rbp, 0
-	subq	$48, %rsp
-	.seh_stackalloc	48
+	subq	$64, %rsp
+	.seh_stackalloc	64
 	.seh_endprologue
 	call	__main
-	movl	$1, -4(%rbp)
-	cmpl	$0, -4(%rbp)
-	je	.L2
-	movl	$114514, %eax
-	jmp	.L3
-.L2:
-	movl	$1919810, %eax
-.L3:
-	addq	$48, %rsp
+	movabsq	$2329285835465771092, %rax
+	movq	%rax, -23(%rbp)
+	movabsq	$20070800167293728, %rax
+	movq	%rax, -16(%rbp)
+	leaq	-23(%rbp), %rax
+	movq	%rax, -8(%rbp)
+	movl	$0, %eax
+	addq	$64, %rsp
 	popq	%rbp
 	ret
 	.seh_endproc
