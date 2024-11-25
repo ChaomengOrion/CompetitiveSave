@@ -1,8 +1,4 @@
-a = list(map(int, input().strip().split(' ')))
-
-for n in range(1, 51):
-    ans = []
-    for m in range(0, len(a)):
-        if a[m] == n:
-            ans.append(m)
-    print(n, ans, ans[1] - ans[0])
+x = 1
+for k in range(1, int(10)):
+    #print(k, bin(k)[2:], bin(x)[2:], k * x, bin(k * x)[2:], (k * x) ^ x, bin((k * x) ^ x)[2:], ((k * x) ^ x) - (k * x))
+    print(k, (k * x) ^ x)
