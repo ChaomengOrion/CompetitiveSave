@@ -1,64 +1,77 @@
 #include <bits/stdc++.h>
-#include <iostream>
-#define ll long long
-#define ld long double
-#define CERR std::cerr << "[debug_line:" << __LINE__ << "]: "
- 
+
+typedef long long ll;
+#define long long int
+#define inf 0x3f3f3f3f
+#define endl '\n'
+#define db(a) cout << #a << " = " << a << endl;
+#define cy cout << "YES" << '\n'
+#define cn cout << "NO" << '\n'
 using namespace std;
- 
-ll n, m, q, x, suma = 0, sumb = 0;
-
-void solve()
-{
- 
-    cin >> n >> m >> q;
-    vector<bool> sa(2*n +3), sb(2*m +3);
+typedef pair<int, int> PII;
+int T = 1;
+const int N = 4e5 + 100;
+ll n, k;
+ll a[N], b[N], c[N], d[N], g[N];
+ll p[2 * N], tp[2 * N];
+map<ll, ll> fu;
+map<ll, ll> fn;
+void solve() {
+    fu.clear();
+    fn.clear();
+    cin >> n >> k;
+    for (int i = 1; i <= n; i++) cin >> a[i];
+    for (int i = 1; i <= n; i++) cin >> b[i];
     for (int i = 1; i <= n; i++) {
-        cin >> x;
-        suma += x;
-        sa[n + x] = 1;        
+        tp[2 * i - 1] = a[i];
+        tp[2 * i] = b[i];
     }
-    for (int i = 1; i <= m; i++) {
-        cin >> x;
-        sumb += x;
-        sb[m + x] = 1;
-    }
-    //sa[n] -> 0
-    for (int i = 1; i <= q; i++) {
-        bool flag = 0;
-        cin >> x;
- 
-        if (x == 0) {
-            if ((abs(suma) <= n && sa[-suma + n]) || (abs(sumb) <= n && sb[-sumb + n])) {
-                cout << "Yes" << endl;
-                flag = 1;
-            }
-        } else {
-            //
-            for (int i = 1; i <= sqrt(abs(x)); i++) {
-                if (x % i) continue;
-
-                int x1 = i, x2 = x / i;
-                if ((abs(suma - x1) <= n && abs(sumb - x2) <= m && sa[n + suma - x1] && sb[n + sumb - x2]) ||
-                    (abs(suma - x2) <= n && abs(sumb - x1) <= m && sa[n + suma - x2] && sb[n + sumb - x1]) ||
-                    (abs(suma + x1) <= n && abs(sumb + x2) <= m && sa[n + suma + x1] && sb[n + sumb + x2]) ||
-                    (abs(suma + x2) <= n && abs(sumb + x1) <= m && sa[n + suma + x2] && sb[n + sumb + x1])) {
-                    cout << "Yes" << endl;
-                    flag = 1;
-                    break;
-                }
-            }
-            if(!flag) cout << "NO"<<endl;
+    sort(tp + 1, tp + 2 * n + 1);
+    ll tt = 0, last = -1;
+    for (int i = 1; i <= 2 * n; i++) {
+        if (tp[i] != last) {
+            p[++tt] = tp[i];
+            last = tp[i];
         }
-        
     }
+    for (int i = 1; i <= tt; i++) {
+        fu[p[i]] = i;
+        fn[i] = p[i];
+    }
+    memset(d, 0, sizeof d);
+    for (int i = 1; i <= n; i++) {
+        d[fu[a[i]] + 1]++;
+        d[fu[b[i]] + 1]--;
+    }
+    c[0] = 0;
+    for (int i = 1; i <= tt; i++) {
+        c[i] = c[i - 1] + d[i];
+    }
+    memset(d, 0, sizeof d);
+    for (int i = 1; i <= n; i++) {
+        d[1]++;
+        d[fu[b[i]] + 1]--;
+    }
+    g[0] = 0;
+    for (int i = 1; i <= tt; i++) {
+        g[i] = g[i - 1] + d[i];
+    }
+    ll ans = 0;
+    for (int i = 1; i <= tt; i++) {
+        if (c[i] <= k) {
+
+            ans = max(ans, (ll)fn[i] * (ll)g[i]);
+            // cout<<fn[i]<<endl;
+        }
+    }
+    cout << ans << endl;
 }
- 
-int main()
-{
-    std::cin.tie(nullptr)->sync_with_stdio(false);
-    int t=1;
-    //cin >> t;
-    while(t--) solve();
+int main() {
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cin >> T;
+    while (T--) {
+        solve();
+    }
     return 0;
-} 
+}

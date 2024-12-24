@@ -1,8 +1,5 @@
 #include <bits/stdc++.h>
 
-#define LOG(...) std::cerr << "DEBUG: " << __VA_ARGS__ << std::endl;
-#define LOGV(vec, size) std::cerr << #vec << " = " << '['; for (int i = 0; i < size; i++) { std::cerr << vec[i]; if (i != size - 1) std::cerr << ", "; } std::cerr << ']' << std::endl;
-
 void solve()
 {
     int N;

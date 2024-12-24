@@ -1,26 +1,20 @@
+import random
 
-def generate_input(n, m, q, max_value):
-    # 生成数组 a 和 b
-    a = [i * (1 if i % 2 == 0 else -1) for i in range(1, n + 1)]
-    b = [i * (-1 if (i // 13) % 2 == 0 else 1) for i in range(1, m + 1)]
-    b[-1] = 71117
-    # 生成查询
-    queries = [196560 for _ in range(0, q)]
+def generate_input(n, k, max_value):
+    # 生成数组 a 和 b，确保所有元素唯一
+    a = [random.randint(0, max_value) for i in range(0, n)]
     
-    # 输出数据
+    b = [random.randint(a[i] + 1, max_value + 1) for i in range(0, n)]
     
-    print(n, m, q)
+    print(1)  # t = 1
+    print(n, k)
     print(" ".join(map(str, a)))
     print(" ".join(map(str, b)))
-    for query in queries:
-        print(query)
-    #print(sum(a))
-    #print(sum(b))
 
 if __name__ == "__main__":
     # 参数设置
-    n = 200000  # 数组 a 的长度
-    m = 200000  # 数组 b 的长度
-    q = 50000   # 查询的数量
-    max_value = 200000  # 数组元素的最大值
-    generate_input(n, m, q, max_value)
+    n = 200000
+    k = 200000
+    max_value = 2000000000  # 确保 b_list 不与 a_list 重叠
+    random.seed(155)
+    generate_input(n, k, max_value)
