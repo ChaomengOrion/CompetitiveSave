@@ -31,7 +31,7 @@ def run_hack_and_cpp(hack_script, executable):
     print(f"{executable} execution time: {run_time:.4f} seconds")
 
 if __name__ == "__main__":
-    hack_script = './hacker-v2.py'  # hack.py 脚本路径
+    hack_script = './hacker-v1.py'  # hack.py 脚本路径
     cpp_executable = ['./output/_tohack.exe']  # C++ 可执行文件路径
     #cpp_executable = '../output/F_Easy_Demon_Problem.exe'  # C++ 可执行文件路径
     py_executable = ['python', './_tohack.py']

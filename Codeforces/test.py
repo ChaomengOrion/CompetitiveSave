@@ -1,4 +1,7 @@
-x = 1
-for k in range(1, int(10)):
-    #print(k, bin(k)[2:], bin(x)[2:], k * x, bin(k * x)[2:], (k * x) ^ x, bin((k * x) ^ x)[2:], ((k * x) ^ x) - (k * x))
-    print(k, (k * x) ^ x)
+
+for n in range(719, 720):
+    for d in range(1, 10):
+        s = str(d) * n
+        s = int(s)
+        if s % 9 == 0:
+            print(s, len(str(s)))

@@ -14,6 +14,14 @@ int main() {
         p->prev = last;
         if (last) last = last->next = p;
         else head = last = p;
+
+        //! 单向版本
+        /*{
+            node* p = new node(val);
+            if (last) last = last->next = p;
+            else head = last = p;
+        }*/
+        //!
     };
 
     auto del = [&](node* p) -> void {
