@@ -6,7 +6,11 @@ using i64 = long long;
 #define LOGV(_vec, _size) std::cerr << #_vec << " = " << '['; for (int _i = 0; _i < (_size); _i++) { std::cerr << (_vec)[_i]; if (_i != (_size) - 1) std::cerr << ", "; } std::cerr << ']' << std::endl;
 
 void solve() {
-    LOG(114514)
+    auto nth_fibonacci = [&](this auto self, unsigned n) -> unsigned {
+    return n < 2 ? n : self(n - 1) + self(n - 2);
+    };
+
+    std::cout << nth_fibonacci(10u);
 }
 
 int main()
