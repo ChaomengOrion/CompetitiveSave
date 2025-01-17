@@ -167,11 +167,11 @@ struct Info {
     i64 val;
     Info() = default; //* 无参初始化（重置时候用）
     Info(i64 v) : val(v) {} //? 从其他类型转换（Build时候用）
-};
 
-Info operator+(const Info& a, const Info& b) { //* 合并操作，a左b右
-    return Info(a.val + b.val);
-}
+    friend Info operator+(const Info& a, const Info& b) { //* 合并操作，a左b右
+        return Info(a.val + b.val);
+    }
+};
 
 //! Only for LSGT
 struct Tag {

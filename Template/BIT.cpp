@@ -35,3 +35,43 @@ struct BIT {
         return posQuery(r) - posQuery(l - 1);
     }
 };
+
+template<typename T>
+class TreeArray
+{
+private:
+    int size;
+    std::vector<T> arr;
+
+public:
+    TreeArray(int len) : size(len), arr(len + 1, 0) { }
+
+    TreeArray(std::vector<T>& source) : size(source.size()), arr(size + 1, 0)
+    {
+        for (int i = 1; i <= size; i++) {
+            add(i, source[i]);
+        }
+    }
+
+    inline static int lowbit(int x) { return x & -x; }
+
+    void add(int pos, T value)
+    {
+        while (pos <= size) {
+            arr[pos] += value;
+            pos += lowbit(pos);
+        }
+    }
+
+    i64 query(int pos)
+    {
+        i64 sum = 0;
+        while (pos >= 1) {
+            sum += arr[pos];
+            pos -= lowbit(pos);
+        }
+        return sum;
+    }
+
+    i64 query(int l, int r) { return query(r) - query(l - 1); }
+};

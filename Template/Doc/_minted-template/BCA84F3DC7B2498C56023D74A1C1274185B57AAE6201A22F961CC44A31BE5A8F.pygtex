@@ -14,8 +14,8 @@
 \PYG{+w}{        }\PYG{n}{last}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{temp}\PYG{p}{;}
 \PYG{+w}{    }\PYG{p}{\PYGZcb{}}
 
-\PYG{+w}{    }\PYG{n}{TreeArray}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n}{tr1}\PYG{p}{(}\PYG{n}{diff}\PYG{p}{);}
-\PYG{+w}{    }\PYG{n}{TreeArray}\PYG{o}{\PYGZlt{}}\PYG{n}{i64}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n}{tr2}\PYG{p}{(}\PYG{n}{diff2}\PYG{p}{);}
+\PYG{+w}{    }\PYG{n}{BIT}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n}{tr1}\PYG{p}{(}\PYG{n}{diff}\PYG{p}{);}
+\PYG{+w}{    }\PYG{n}{BIT}\PYG{o}{\PYGZlt{}}\PYG{n}{i64}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n}{tr2}\PYG{p}{(}\PYG{n}{diff2}\PYG{p}{);}
 \PYG{+w}{    }\PYG{c+c1}{// pre[i] = k*Σ(D[i]) \PYGZhy{} Σ((i\PYGZhy{}1)*D[i])}
 \PYG{+w}{    }\PYG{k}{while}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{M}\PYG{o}{\PYGZhy{}\PYGZhy{}}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
 \PYG{+w}{        }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{op}\PYG{p}{;}

@@ -35,19 +35,17 @@
         \subsection{快速幂}
         \cpp{../快速幂.cpp}
 
-        \subsection{素数筛}
-        \begin{minted}[frame=single, linenos=true]{cpp}
-bool isPrime(int num)
-{
-    if (num == 1) return 0;
-    if (num == 2 || num == 3) return 1;
-    if (num % 6 != 1 && num % 6 != 5) return 0;
-    int tmp = sqrt(num);
-    for (int i = 5; i <= tmp; i += 6)
-        if (num % i == 0 || num % (i + 2) == 0) return 0;
-    return 1;
-}
-        \end{minted}
+        \subsection{DP}
+        \subsubsection{LIS}
+        \cpp{../LIS.cpp}
+        \subsubsection{LIS}
+        \cpp{../LCS.cpp}
+        \subsubsection{01背包}
+        \cpp{../0_1_背包.cpp}
+        \subsubsection{完全背包}
+        \cpp{../完全背包.cpp}
+        \subsubsection{多重背包}
+        \cpp{../多重背包.cpp}
 
         \subsection{二维差分}
         \begin{minted}[frame=single, linenos=true]{cpp}
@@ -113,46 +111,22 @@ void solve()
 }
         \end{minted}
 
-        \subsection{最短路(Dijkstra)}
-        \begin{minted}[frame=single, linenos=true]{cpp}
-void solve()
-{
-    int N, M, S; // 点 边 出发点
-    std::cin >> N >> M >> S;
-    std::vector<std::vector<std::pair<int, int>>> graph(N + 1);
-    for (int i = 0; i < M; i++) {
-        int u, v, len;
-        std::cin >> u >> v >> len;
-        graph[u].emplace_back(v, len);
-        //graph[v].to.emplace_back(u, len);
-    }
+        \subsection{图论}
+        \subsubsection{最短路(Dijkstra)}
+        \cpp{../dijkstra.cpp}
 
-    std::priority_queue<std::pair<int, int>, std::vector<std::pair<int, int>>, std::greater<>> pq;
-    std::vector<int> dis(N + 1, INT_MAX);
-    dis[S] = 0;
-    pq.emplace(0, S);
-    while(!pq.empty()) {
-        auto [d, i] = pq.top();
-        pq.pop();
-        if (d != dis[i]) continue;
+        \subsubsection{最短路(SPFA)}
+        \cpp{../SPFA.cpp}
 
-        for (auto [nid, cost] : graph[i]) {
-            if (dis[nid] > dis[i] + cost) {
-                dis[nid] = dis[i] + cost;
-                pq.emplace(dis[nid], nid);
-            }
-        }
-    }
+        \subsubsection{最小生成树}
+        \cpp{../dijkstra.cpp}
 
-    for (int i = 1; i <= N; i++) {
-        std::cout << dis[i] << ' ';
-    }
-}
-        \end{minted}
-        
+        \subsubsection{最近公共祖先LCA}
+        \cpp{../最近公共祖先_LCA.cpp}
+
     \section{数据结构}
         \subsection{树状数组}
-        \cpp{../tree_array.cpp}
+        \cpp{../BIT.cpp}
         实现区间查询区间修改
         \begin{minted}[frame=single, linenos=true]{cpp}
 void solve()
@@ -170,8 +144,8 @@ void solve()
         last = temp;
     }
 
-    TreeArray<int> tr1(diff);
-    TreeArray<i64> tr2(diff2);
+    BIT<int> tr1(diff);
+    BIT<i64> tr2(diff2);
     // pre[i] = k*Σ(D[i]) - Σ((i-1)*D[i])
     while (M--) {
         int op;
@@ -196,6 +170,13 @@ void solve()
 
         \subsection{ST表}
         \cpp{../ST.cpp}
+
+        \subsection{线段树}
+        \cpp{../SegTree.cpp}
+
+    \section{计算几何}
+        \subsection{Point}
+        \cpp{../Point.cpp}
 
     \section{数学相关}
         \subsection{模运算}
@@ -224,6 +205,9 @@ i64 mul(i64 a, i64 b, i64 p) { // a > p 乘
     return ans;
 }
         \end{minted}
+
+        \subsection{素数筛\&欧拉函数}
+        \cpp{"../素数筛&欧拉函数.cpp"}
 
     \section{杂项}
         \subsection{快速读入}

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.10.30)  2 NOV 2024 12:17
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.10.30)  18 JAN 2025 01:45
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -521,7 +521,10 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \tf@toc=\write5
 \openout5 = `template.toc'.
 
- (./_minted-template/autumn.pygstyle) (./_minted-template/81B6CCF7AE97065D00E33A982EAD3C1A7F3B2371E17B9A9E8E7FDE94CDD050BB.pygtex
+ (./_minted-template/autumn.pygstyle) (./_minted-template/81B6CCF7AE97065D00E33A982EAD3C1A7F3B2371E17B9A9E8E7FDE94CDD050BB.pygtex [1
+
+
+]
 
 Package fontspec Info: Could not resolve font "FangSong/BI" (it probably
 (fontspec)             doesn't exist).
@@ -545,51 +548,40 @@ Package fontspec Info: Font family 'FangSong(0)' created for font 'FangSong'
 (fontspec)             <->"FangSong/OT:script=hani;language=dflt;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 
-) (./_minted-template/C57ED0666DBA3C3DA426186C889E704C2FCA1CBAF44F5F369361847A6C2EA452.pygtex
+) (./_minted-template/42FCA88CBF56BFD143AEBF533CC731422FCA1CBAF44F5F369361847A6C2EA452.pygtex
 
 LaTeX Font Warning: Font shape `TU/JetBrainsMono-Medium.ttf(0)/m/it' undefined
 (Font)              using `TU/JetBrainsMono-Medium.ttf(0)/m/n' instead on input line 2.
 
-[1
-
-
-]) (./_minted-template/FB4D52A01C7CA91F78C11B4142E27EF4A2789B41F9F5EDC689D26AF0848F2698.pygtex)
-\openout3 = `template.pyg'.
-
- (./_minted-template/922DD549A75A2A087A16F2CF1E627384D08AEF7AC69A6AE6D28204C7A039EB16.pygtex [2])
-\openout3 = `template.pyg'.
-
- (./_minted-template/BC186BC5D49304DCF7A6626F3E16B087D08AEF7AC69A6AE6D28204C7A039EB16.pygtex
+) (./_minted-template/7487F528C31FC262AD67854F95FFDF2EA2789B41F9F5EDC689D26AF0848F2698.pygtex [2]
 
 LaTeX Font Warning: Font shape `TU/FangSong(0)/m/it' undefined
-(Font)              using `TU/FangSong(0)/m/n' instead on input line 17.
+(Font)              using `TU/FangSong(0)/m/n' instead on input line 16.
 
-)
+) (./_minted-template/CF20B83D6A3891E9E2D95E6620A22EF57B39F7C6049B02354327AB2740821EE0.pygtex) (./_minted-template/0D57DEC37FCAF529DBC466456349998BE6CC85E526652B206876666762302146.pygtex [3]) (./_minted-template/AF0DAB8388233BBC533D4504E7FE0E0EBD4A897F8B7BE7A9732D5E1088332E54.pygtex) (./_minted-template/9D93BBEC74F0B12DCE6E6D0B454483DD18DC3D9A35E6E89D0E9977AAD96955F2.pygtex [4]) (./_minted-template/78D4BC1F7DE9EC98EFCAB6811572123552B103F176F4A290F6350510A3FFC037.pygtex [5])
 \openout3 = `template.pyg'.
 
-runsystem(pygmentize -l "cpp" -f latex -P commandprefix=PYG -F tokenmerge -P stripnl="False" -o _minted-template/C4D1845B4A7380F92193B73A01D3B392D08AEF7AC69A6AE6D28204C7A039EB16.pygtex template.pyg)...executed.
-
- (./_minted-template/C4D1845B4A7380F92193B73A01D3B392D08AEF7AC69A6AE6D28204C7A039EB16.pygtex [3])
+ (./_minted-template/BC186BC5D49304DCF7A6626F3E16B087D08AEF7AC69A6AE6D28204C7A039EB16.pygtex [6])
 \openout3 = `template.pyg'.
 
- (./_minted-template/C16A4887938589BA131BCC58657712E5D08AEF7AC69A6AE6D28204C7A039EB16.pygtex [4]) (./_minted-template/20DEA1BF5BF27838D5CC9E2DD95C1FB3971550E8AA81CCBDEA26FC59A09AF1A1.pygtex
+ (./_minted-template/C4D1845B4A7380F92193B73A01D3B392D08AEF7AC69A6AE6D28204C7A039EB16.pygtex [7]) (./_minted-template/8B1CADF39265A36B8572E6F8F93E1192EB3B2AACB39DE706EA0AB154A525F482.pygtex
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <9> on input line 4.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 4.
- [5])
+ [8]) (./_minted-template/54D2F14A8FEDC0C5D14B061F263F32B65E0A9661F6AF789C05C522461E4ED47C.pygtex [9]) (./_minted-template/8B1CADF39265A36B8572E6F8F93E1192EB3B2AACB39DE706EA0AB154A525F482.pygtex [10]) (./_minted-template/36CC3B44C66B3E677032E0D9CD5C0154AB80C6055D8C875FAA2F21562007D903.pygtex [11] [12]) (./_minted-template/0CFDFE97121472AF3EDF449554623DF6A5DB0BFAFBB3048E3062002EAC8E3A1B.pygtex [13] [14])
 \openout3 = `template.pyg'.
 
- (./_minted-template/5909B4AE0651F680D864DE1D2DEA97BBD08AEF7AC69A6AE6D28204C7A039EB16.pygtex [6]) (./_minted-template/A1C4568532D7604EE2F3325F312FDD6AADCC0FC9B782215B4A4B46D79CCC5BBA.pygtex)
+ (./_minted-template/BCA84F3DC7B2498C56023D74A1C12741D08AEF7AC69A6AE6D28204C7A039EB16.pygtex [15]) (./_minted-template/A1C4568532D7604EE2F3325F312FDD6AADCC0FC9B782215B4A4B46D79CCC5BBA.pygtex) (./_minted-template/F5C4574DFB9862C4EF700BD2FCAD089AE2D584BFCAEBC27A6CB47A2019E11FD3.pygtex [16] [17] [18] [19] [20] [21]) (./_minted-template/B878749E32C42F3959A257E4C11ADDD541EEEF59E7F2D421AB4D938D3F2D1C53.pygtex [22] [23]
+Missing character: There is no ∠ (U+2220) in font [C:/Users/21988/AppData/Local/Microsoft/Windows/Fonts/JetBrainsMono-Medium.ttf]/OT:script=latn;language=dflt;!
+Missing character: There is no ∠ (U+2220) in font [C:/Users/21988/AppData/Local/Microsoft/Windows/Fonts/JetBrainsMono-Medium.ttf]/OT:script=latn;language=dflt;!
+[24] [25] [26])
 \openout3 = `template.pyg'.
 
- (./_minted-template/96C31B75AA00091849A4C1F729B9F370D08AEF7AC69A6AE6D28204C7A039EB16.pygtex [7])
+ (./_minted-template/96C31B75AA00091849A4C1F729B9F370D08AEF7AC69A6AE6D28204C7A039EB16.pygtex) (./_minted-template/9F13C07D599241067D91519E9B71A397.pygtex [27] [28])
 \openout3 = `template.pyg'.
 
- (./_minted-template/FBF4240838CDD745B15B5EF18FF355FED08AEF7AC69A6AE6D28204C7A039EB16.pygtex)
-runsystem(del _minted-template\2F3FAC09B316465C57104A880380F0D2D08AEF7AC69A6AE6D28204C7A039EB16.pygtex)...executed.
-
- [8] (./template.aux)
+ (./_minted-template/FBF4240838CDD745B15B5EF18FF355FED08AEF7AC69A6AE6D28204C7A039EB16.pygtex) [29] (./template.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2022/07/14>
@@ -602,12 +594,12 @@ runsystem(del template.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 11178 strings out of 474773
- 293072 string characters out of 5759508
- 1946842 words of memory out of 5000000
- 33094 multiletter control sequences out of 15000+600000
- 562831 words of font info for 95 fonts, out of 8000000 for 9000
+ 11281 strings out of 474773
+ 300690 string characters out of 5759508
+ 1949842 words of memory out of 5000000
+ 33166 multiletter control sequences out of 15000+600000
+ 562847 words of font info for 97 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 93i,8n,97p,744b,757s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 93i,8n,97p,868b,757s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on template.pdf (8 pages).
+Output written on template.pdf (29 pages).
