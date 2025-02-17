@@ -1,8 +1,12 @@
-Checks: '-*,
-        clang-analyzer-core.*,
-        clang-analyzer-cplusplus.*,
+Checks: "
+        -*,
+        clang-analyzer-*,
+        modernize-*,
+        -modernize-use-trailing-return-type,
+        -modernize-avoid-c-arrays,
         bugprone-*,
         -bugprone-narrowing-conversions,
         -bugprone-implicit-widening-of-multiplication-result,
         misc-unconventional-assign-operator,
-        misc-unused-parameters'
+        misc-unused-parameters
+        "

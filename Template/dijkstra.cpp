@@ -30,7 +30,7 @@ void solve()
         cnt++;
         for (auto [son, cost] : graph[x].to) {
             if (graph[son].visit) continue; //? 可省略，下一个if也会筛掉，不过最小生成树时候不能删
-            if (graph[x].dis + cost < graph[son].dis) { // 松弛边
+            if (graph[son].dis > graph[x].dis + cost) { // 松弛边
                 graph[son].dis = graph[x].dis + cost;
                 Q.emplace(graph[x].dis + cost, son);
             }

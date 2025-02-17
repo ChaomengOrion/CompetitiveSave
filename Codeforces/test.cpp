@@ -10,6 +10,28 @@ void solve() {
     __gnu_pbds::tree<int, __gnu_pbds::null_type, std::less<int>,
                     __gnu_pbds::rb_tree_tag,
                     __gnu_pbds::tree_order_statistics_node_update> a;
+    
+                    int dd = 3;
+                    int& ddr = dd;
+                    int&& ddrr = 3;
+                    auto dda = ddrr;
+                    auto [a1, b1, c1] = std::tie(dd, ddr, dd);
+                    auto [a2, b2, c2] = std::forward_as_tuple(dd, ddr, 3.3);
+                    auto ttt = std::tie(dd, ddr, dd);
+                    std::tie(dd, ddr, dd) = ttt;
+                    std::tie(dd, ddr, dd) = std::tie(a1, a1, c2);
+                    std::tuple(dd, ddr, dd) = std::tie(a1, a1, c2);
+                    std::tuple(dd, ddr, dd) = std::tuple(a1, a1, c2);
+                    std::tie(dd, ddr, dd) = std::tuple(a1, a1, c2);
+            
+                    int vvv = 33;
+                    std::vector<std::reference_wrapper<int>> test;
+                    int &vvvr = vvv; 
+                    test.push_back(vvv);
+                    test.push_back(vvvr);
+                    auto ccc = std::ref(vvv);
+                    test.push_back(ccc);
+                    test.push_back(std::forward<int&>(vvv));
 }
 
 int main() {
