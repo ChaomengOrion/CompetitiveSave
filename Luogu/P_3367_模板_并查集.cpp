@@ -1,35 +1,55 @@
 #include <bits/stdc++.h>
 
+#ifndef ONLINE_JUDGE
+#include "[debug]util.hpp"
+#define LOG(...) std::cerr << "[" << __LINE__ << "]: [", __DEBUG_UTIL__::printer(#__VA_ARGS__, __VA_ARGS__)
+#define LOGI(info, ...) std::cerr << "[" << __LINE__ << "]: <" << info << "> - [", __DEBUG_UTIL__::printer(#__VA_ARGS__, __VA_ARGS__)
+#define LOGA(...) std::cerr << "[" << __LINE__ << "]: [", __DEBUG_UTIL__::printerArr(#__VA_ARGS__, __VA_ARGS__)
+#else
+#define LOG(...)
+#define LOGI(...)
+#define LOGA(...)
+#endif
+
 using i64 = long long;
 
-#define DEBUG(...) std::cerr << "DEBUG: " << __VA_ARGS__ << std::endl;
-#define DEBUGV(vec, size) std::cerr << #vec << " = " << '['; for (int i = 0; i < size; i++) { std::cerr << vec[i]; if (i != size - 1) std::cerr << ", "; } std::cerr << ']' << std::endl;
+struct DSU {
+    std::vector<int> fa;
 
-void solve()
-{
-    int N, M;
-    std::cin >> N >> M;
-    std::vector<int> fa(N + 1);
-    for (int i = 0; i <= N; i++) {
-        fa[i] = i;
+    DSU(int size) : fa(std::vector<int>(size + 1)) {
+        std::iota(fa.begin() + 1, fa.end(), 1);
     }
-    auto find = [&](auto&& find, int x) -> int {
-        return x == fa[x] ? x : fa[x] = find(find, fa[x]);
-    };
 
-    while (M--) {
-        int Z, X, Y;
-        std::cin >> Z >> X >> Y;
-        if (Z == 1) {
-            fa[find(find, Y)] = fa[find(find, X)];
-        } else if (Z == 2) {
-            std::cout << (fa[find(find, Y)] == fa[find(find, X)] ? 'Y' : 'N') << std::endl;
+    int find(int x) {
+        if (fa[x] == x) return x;
+        fa[x] = find(fa[x]);
+        return fa[x];
+    }
+
+    //* a.root -> b.root
+    void merge(int a, int b) {
+        a = find(a), b = find(b);
+        if (a != b) {
+            fa[a] = fa[b];
+        }
+    }
+};
+
+void solve() {
+    int N, Q;
+    std::cin >> N >> Q;
+    DSU dsu(N);
+    while (Q--) {
+        int op, x, y; std::cin >> op >> x >> y;
+        if (op == 1) {
+            dsu.merge(x, y);
+        } else {
+            std::cout << (dsu.find(x) == dsu.find(y) ? "Y" : "N") << '\n';
         }
     }
 }
 
-int main()
-{
+int main() {
     std::cin.tie(nullptr)->sync_with_stdio(false);
     solve();
     return 0;

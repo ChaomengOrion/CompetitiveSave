@@ -1,1 +1,0 @@
-{"name":"Local: SCA","url":"e:\\Program_Dev\\Competitive\\Practice\\SCA.cpp","tests":[{"id":1732354108212,"input":"4 10 10\n0 0 5 5\n5 -2 15 3\n8 8 15 15\n-2 10 3 15","output":"44"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\Program_Dev\\Competitive\\Practice\\SCA.cpp","group":"local","local":true}

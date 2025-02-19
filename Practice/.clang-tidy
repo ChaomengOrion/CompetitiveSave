@@ -8,6 +8,7 @@ Checks: "
         bugprone-*,
         -bugprone-narrowing-conversions,
         -bugprone-implicit-widening-of-multiplication-result,
+        -bugprone-easily-swappable-parameters,
         misc-unconventional-assign-operator,
         misc-unused-parameters
         "
