@@ -13,7 +13,25 @@
 
 using i64 = long long;
 
-void solve() {}
+void solve() {
+    int N;
+    std::cin >> N;
+    std::vector<int> arr(N);
+    for (int i = 1; i < N - 1; i++) {
+        std::cin >> arr[i];
+    }
+    int last = -1;
+    for (int i = 1; i < N - 1; i++) {
+        if (arr[i] == 1) {
+            if (last != -1 && i - last >= 2 && i - last <= 2) {
+                std::cout << "NO" << '\n';
+                return;
+            }
+            last = i;
+        }
+    }
+    std::cout << "YES" << '\n';
+}
 
 int main() {
     std::cin.tie(nullptr)->sync_with_stdio(false);

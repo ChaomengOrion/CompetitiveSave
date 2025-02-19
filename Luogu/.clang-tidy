@@ -4,6 +4,7 @@ Checks: "
         modernize-*,
         -modernize-use-trailing-return-type,
         -modernize-avoid-c-arrays,
+        -modernize-use-ranges,
         bugprone-*,
         -bugprone-narrowing-conversions,
         -bugprone-implicit-widening-of-multiplication-result,
