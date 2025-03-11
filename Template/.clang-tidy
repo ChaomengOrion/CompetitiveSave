@@ -5,9 +5,11 @@ Checks: "
         -modernize-use-trailing-return-type,
         -modernize-avoid-c-arrays,
         -modernize-use-ranges,
+        -modernize-use-bool-literals,
         bugprone-*,
         -bugprone-narrowing-conversions,
         -bugprone-implicit-widening-of-multiplication-result,
+        -bugprone-easily-swappable-parameters,
         misc-unconventional-assign-operator,
         misc-unused-parameters
         "
