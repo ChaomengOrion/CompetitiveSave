@@ -6,6 +6,8 @@ Checks: "
         -modernize-avoid-c-arrays,
         -modernize-use-ranges,
         -modernize-use-bool-literals,
+        -modernize-use-nodiscard,
+        -modernize-return-braced-init-list,
         bugprone-*,
         -bugprone-narrowing-conversions,
         -bugprone-implicit-widening-of-multiplication-result,
