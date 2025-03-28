@@ -3,9 +3,6 @@
 
 \PYG{k}{using}\PYG{+w}{ }\PYG{n}{i64}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k+kt}{long}\PYG{+w}{ }\PYG{k+kt}{long}\PYG{p}{;}
 
-\PYG{c+cp}{\PYGZsh{}define LOG(...) std::cerr \PYGZlt{}\PYGZlt{} \PYGZdq{}Line[\PYGZdq{} \PYGZlt{}\PYGZlt{} \PYGZus{}\PYGZus{}LINE\PYGZus{}\PYGZus{} \PYGZlt{}\PYGZlt{} \PYGZdq{}]: \PYGZdq{} \PYGZlt{}\PYGZlt{} \PYGZus{}\PYGZus{}VA\PYGZus{}ARGS\PYGZus{}\PYGZus{} \PYGZlt{}\PYGZlt{} std::endl;}
-\PYG{c+cp}{\PYGZsh{}define LOGV(\PYGZus{}vec, \PYGZus{}size) std::cerr \PYGZlt{}\PYGZlt{} \PYGZsh{}\PYGZus{}vec \PYGZlt{}\PYGZlt{} \PYGZdq{} = \PYGZdq{} \PYGZlt{}\PYGZlt{} \PYGZsq{}[\PYGZsq{}; for (int \PYGZus{}i = 0; \PYGZus{}i \PYGZlt{} (\PYGZus{}size); \PYGZus{}i++) \PYGZob{} std::cerr \PYGZlt{}\PYGZlt{} (\PYGZus{}vec)[\PYGZus{}i]; if (\PYGZus{}i != (\PYGZus{}size) \PYGZhy{} 1) std::cerr \PYGZlt{}\PYGZlt{} \PYGZdq{}, \PYGZdq{}; \PYGZcb{} std::cerr \PYGZlt{}\PYGZlt{} \PYGZsq{}]\PYGZsq{} \PYGZlt{}\PYGZlt{} std::endl;}
-
 \PYG{k}{struct}\PYG{+w}{ }\PYG{n+nc}{node}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
 \PYG{+w}{    }\PYG{n}{std}\PYG{o}{::}\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n}{to}\PYG{p}{;}
 \PYG{+w}{    }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{depth}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{\PYGZhy{}1}\PYG{p}{;}
