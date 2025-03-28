@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.10.30)  18 JAN 2025 01:45
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.10.30)  28 MAR 2025 15:27
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -7,11 +7,11 @@ entering extended mode
 (./template.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
-(e:/Env/texlive/2024/texmf-dist/tex/latex/paper/paper.cls
+(d:/texlive/2024/texmf-dist/tex/latex/paper/paper.cls
 Document Class: paper 2008/05/30 1.0l LaTeX document class (wm).
 \hours=\count184
 \minutes=\count185
-(e:/Env/texlive/2024/texmf-dist/tex/latex/base/size10.clo
+(d:/texlive/2024/texmf-dist/tex/latex/base/size10.clo
 File: size10.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
 )
 \beforetitlespace=\skip48
@@ -27,9 +27,9 @@ File: size10.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
 \abovecaptionskip=\skip50
 \belowcaptionskip=\skip51
 \bibindent=\dimen140
-) (e:/Env/texlive/2024/texmf-dist/tex/latex/ctex/ctex.sty (e:/Env/texlive/2024/texmf-dist/tex/latex/l3kernel/expl3.sty
+) (d:/texlive/2024/texmf-dist/tex/latex/ctex/ctex.sty (d:/texlive/2024/texmf-dist/tex/latex/l3kernel/expl3.sty
 Package: expl3 2024-02-20 L3 programming layer (loader) 
- (e:/Env/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
+ (d:/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
 File: l3backend-xetex.def 2024-02-20 L3 backend support: XeTeX
 \g__graphics_track_int=\count194
 \l__pdf_internal_box=\box51
@@ -38,13 +38,13 @@ File: l3backend-xetex.def 2024-02-20 L3 backend support: XeTeX
 \g__pdf_backend_link_int=\count197
 ))
 Package: ctex 2022/07/14 v2.5.10 Chinese adapter in LaTeX (CTEX)
- (e:/Env/texlive/2024/texmf-dist/tex/latex/ctex/ctexhook.sty
+ (d:/texlive/2024/texmf-dist/tex/latex/ctex/ctexhook.sty
 Package: ctexhook 2022/07/14 v2.5.10 Document and package hooks (CTEX)
-) (e:/Env/texlive/2024/texmf-dist/tex/latex/ctex/ctexpatch.sty
+) (d:/texlive/2024/texmf-dist/tex/latex/ctex/ctexpatch.sty
 Package: ctexpatch 2022/07/14 v2.5.10 Patching commands (CTEX)
-) (e:/Env/texlive/2024/texmf-dist/tex/latex/base/fix-cm.sty
+) (d:/texlive/2024/texmf-dist/tex/latex/base/fix-cm.sty
 Package: fix-cm 2020/11/24 v1.1t fixes to LaTeX
- (e:/Env/texlive/2024/texmf-dist/tex/latex/base/ts1enc.def
+ (d:/texlive/2024/texmf-dist/tex/latex/base/ts1enc.def
 File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding TS1 on input line 47.
 ))
@@ -53,13 +53,13 @@ LaTeX Font Info:    Redeclaring font encoding TS1 on input line 47.
 \l__ctex_tmp_dim=\dimen141
 \g__ctex_section_depth_int=\count199
 \g__ctex_font_size_int=\count266
- (e:/Env/texlive/2024/texmf-dist/tex/latex/ctex/config/ctexopts.cfg
+ (d:/texlive/2024/texmf-dist/tex/latex/ctex/config/ctexopts.cfg
 File: ctexopts.cfg 2022/07/14 v2.5.10 Option configuration file (CTEX)
-) (e:/Env/texlive/2024/texmf-dist/tex/latex/ctex/engine/ctex-engine-xetex.def
+) (d:/texlive/2024/texmf-dist/tex/latex/ctex/engine/ctex-engine-xetex.def
 File: ctex-engine-xetex.def 2022/07/14 v2.5.10 XeLaTeX adapter (CTEX)
- (e:/Env/texlive/2024/texmf-dist/tex/xelatex/xecjk/xeCJK.sty
+ (d:/texlive/2024/texmf-dist/tex/xelatex/xecjk/xeCJK.sty
 Package: xeCJK 2022/08/05 v3.9.1 Typesetting CJK scripts with XeLaTeX
- (e:/Env/texlive/2024/texmf-dist/tex/latex/l3packages/xtemplate/xtemplate.sty (e:/Env/texlive/2024/texmf-dist/tex/latex/l3packages/xtemplate/xtemplate-2023-10-10.sty
+ (d:/texlive/2024/texmf-dist/tex/latex/l3packages/xtemplate/xtemplate.sty (d:/texlive/2024/texmf-dist/tex/latex/l3packages/xtemplate/xtemplate-2023-10-10.sty
 Package: xtemplate 2023-10-10 L3 Experimental prototype document functions
 \l__xtemplate_tmp_dim=\dimen142
 \l__xtemplate_tmp_int=\count267
@@ -126,11 +126,11 @@ Package xtemplate Info: Declaring object type 'xeCJK/punctuation' taking 0
 \g__xeCJK_fam_allocation_int=\count278
 \l__xeCJK_verb_case_int=\count279
 \l__xeCJK_verb_exspace_skip=\skip59
- (e:/Env/texlive/2024/texmf-dist/tex/latex/fontspec/fontspec.sty (e:/Env/texlive/2024/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+ (d:/texlive/2024/texmf-dist/tex/latex/fontspec/fontspec.sty (d:/texlive/2024/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
 Package: xparse 2024-02-18 L3 Experimental document command parser
 )
 Package: fontspec 2024/02/13 v2.9a Font selection for XeLaTeX and LuaLaTeX
- (e:/Env/texlive/2024/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+ (d:/texlive/2024/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
 Package: fontspec-xetex 2024/02/13 v2.9a Font selection for XeLaTeX and LuaLaTeX
 \l__fontspec_script_int=\count280
 \l__fontspec_language_int=\count281
@@ -146,26 +146,26 @@ Package: fontspec-xetex 2024/02/13 v2.9a Font selection for XeLaTeX and LuaLaTeX
 \l__fontspec_tmpa_dim=\dimen170
 \l__fontspec_tmpb_dim=\dimen171
 \l__fontspec_tmpc_dim=\dimen172
- (e:/Env/texlive/2024/texmf-dist/tex/latex/base/fontenc.sty
+ (d:/texlive/2024/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
-) (e:/Env/texlive/2024/texmf-dist/tex/latex/fontspec/fontspec.cfg))) (e:/Env/texlive/2024/texmf-dist/tex/xelatex/xecjk/xeCJK.cfg
+) (d:/texlive/2024/texmf-dist/tex/latex/fontspec/fontspec.cfg))) (d:/texlive/2024/texmf-dist/tex/xelatex/xecjk/xeCJK.cfg
 File: xeCJK.cfg 2022/08/05 v3.9.1 Configuration file for xeCJK package
 ))
 \ccwd=\dimen173
 \l__ctex_ccglue_skip=\skip60
 )
 \l__ctex_ziju_dim=\dimen174
- (e:/Env/texlive/2024/texmf-dist/tex/latex/zhnumber/zhnumber.sty
+ (d:/texlive/2024/texmf-dist/tex/latex/zhnumber/zhnumber.sty
 Package: zhnumber 2022/07/14 v3.0 Typesetting numbers with Chinese glyphs
 \l__zhnum_scale_int=\count291
 \l__zhnum_tmp_int=\count292
- (e:/Env/texlive/2024/texmf-dist/tex/latex/zhnumber/zhnumber-utf8.cfg
+ (d:/texlive/2024/texmf-dist/tex/latex/zhnumber/zhnumber-utf8.cfg
 File: zhnumber-utf8.cfg 2022/07/14 v3.0 Chinese numerals with UTF8 encoding
-)) (e:/Env/texlive/2024/texmf-dist/tex/latex/ctex/scheme/ctex-scheme-chinese.def
+)) (d:/texlive/2024/texmf-dist/tex/latex/ctex/scheme/ctex-scheme-chinese.def
 File: ctex-scheme-chinese.def 2022/07/14 v2.5.10 Chinese scheme for generic (CTEX)
- (e:/Env/texlive/2024/texmf-dist/tex/latex/ctex/config/ctex-name-utf8.cfg
+ (d:/texlive/2024/texmf-dist/tex/latex/ctex/config/ctex-name-utf8.cfg
 File: ctex-name-utf8.cfg 2022/07/14 v2.5.10 Caption with encoding UTF-8 (CTEX)
-)) (e:/Env/texlive/2024/texmf-dist/tex/latex/ctex/fontset/ctex-fontset-windows.def
+)) (d:/texlive/2024/texmf-dist/tex/latex/ctex/fontset/ctex-fontset-windows.def
 File: ctex-fontset-windows.def 2022/07/14 v2.5.10 Windows fonts definition (CTEX)
 
 Package fontspec Info: Could not resolve font "KaiTi/B" (it probably doesn't
@@ -197,16 +197,16 @@ Package fontspec Info: Font family 'SimSun(0)' created for font 'SimSun' with
 (fontspec)             <->"KaiTi/OT:script=hani;language=dflt;"
 (fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
 
-)) (e:/Env/texlive/2024/texmf-dist/tex/latex/ctex/config/ctex.cfg
+)) (d:/texlive/2024/texmf-dist/tex/latex/ctex/config/ctex.cfg
 File: ctex.cfg 2022/07/14 v2.5.10 Configuration file (CTEX)
-) (e:/Env/texlive/2024/texmf-dist/tex/latex/geometry/geometry.sty
+) (d:/texlive/2024/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
- (e:/Env/texlive/2024/texmf-dist/tex/latex/graphics/keyval.sty
+ (d:/texlive/2024/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks17
-) (e:/Env/texlive/2024/texmf-dist/tex/generic/iftex/ifvtex.sty
+) (d:/texlive/2024/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
- (e:/Env/texlive/2024/texmf-dist/tex/generic/iftex/iftex.sty
+ (d:/texlive/2024/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2022/02/03 v1.0f TeX engine tests
 ))
 \Gm@cnth=\count293
@@ -221,20 +221,20 @@ Package: iftex 2022/02/03 v1.0f TeX engine tests
 \Gm@layouthoffset=\dimen181
 \Gm@layoutvoffset=\dimen182
 \Gm@dimlist=\toks18
-) (e:/Env/texlive/2024/texmf-dist/tex/latex/minted/minted.sty
+) (d:/texlive/2024/texmf-dist/tex/latex/minted/minted.sty
 Package: minted 2023/12/18 v2.9 Yet another Pygments shim for LaTeX
- (e:/Env/texlive/2024/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+ (d:/texlive/2024/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
- (e:/Env/texlive/2024/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+ (d:/texlive/2024/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
 Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
-) (e:/Env/texlive/2024/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+) (d:/texlive/2024/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
-)) (e:/Env/texlive/2024/texmf-dist/tex/latex/fvextra/fvextra.sty
+)) (d:/texlive/2024/texmf-dist/tex/latex/fvextra/fvextra.sty
 Package: fvextra 2023/11/28 v1.6.1 fvextra - extensions and patches for fancyvrb
- (e:/Env/texlive/2024/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+ (d:/texlive/2024/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count296
-) (e:/Env/texlive/2024/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+) (d:/texlive/2024/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
 Package: fancyvrb 2024/01/20 4.5c verbatim text (tvz,hv)
 \FV@CodeLineNo=\count297
 \FV@InFile=\read2
@@ -242,11 +242,11 @@ Package: fancyvrb 2024/01/20 4.5c verbatim text (tvz,hv)
 \c@FancyVerbLine=\count298
 \FV@StepNumber=\count299
 \FV@OutFile=\write3
-) (e:/Env/texlive/2024/texmf-dist/tex/latex/upquote/upquote.sty
+) (d:/texlive/2024/texmf-dist/tex/latex/upquote/upquote.sty
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verbatim
- (e:/Env/texlive/2024/texmf-dist/tex/latex/base/textcomp.sty
+ (d:/texlive/2024/texmf-dist/tex/latex/base/textcomp.sty
 Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
-)) (e:/Env/texlive/2024/texmf-dist/tex/latex/lineno/lineno.sty
+)) (d:/texlive/2024/texmf-dist/tex/latex/lineno/lineno.sty
 Package: lineno 2023/05/20 line numbers on paragraphs v5.3
 Invalid UTF-8 byte or sequence at line 292 replaced by U+FFFD.
 \linenopenalty=\count300
@@ -293,40 +293,40 @@ LaTeX Info: Redefining \\ on input line 3180.
 \FV@LineIndentBox=\box60
 \c@FV@BreakBufferDepth=\count323
 \FV@LineWidth=\dimen193
-) (e:/Env/texlive/2024/texmf-dist/tex/latex/base/ifthen.sty
+) (d:/texlive/2024/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
-) (e:/Env/texlive/2024/texmf-dist/tex/latex/tools/shellesc.sty
+) (d:/texlive/2024/texmf-dist/tex/latex/tools/shellesc.sty
 Package: shellesc 2023/07/08 v1.0d unified shell escape interface for LaTeX
 Package shellesc Info: Unrestricted shell escape enabled on input line 75.
-) (e:/Env/texlive/2024/texmf-dist/tex/latex/ifplatform/ifplatform.sty
+) (d:/texlive/2024/texmf-dist/tex/latex/ifplatform/ifplatform.sty
 Package: ifplatform 2017/10/13 v0.4a Testing for the operating system
- (e:/Env/texlive/2024/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+ (d:/texlive/2024/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
 Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
- (e:/Env/texlive/2024/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+ (d:/texlive/2024/texmf-dist/tex/generic/infwarerr/infwarerr.sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode not found.
-) (e:/Env/texlive/2024/texmf-dist/tex/generic/catchfile/catchfile.sty
+) (d:/texlive/2024/texmf-dist/tex/generic/catchfile/catchfile.sty
 Package: catchfile 2019/12/09 v1.8 Catch the contents of a file (HO)
- (e:/Env/texlive/2024/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+ (d:/texlive/2024/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
-)) (e:/Env/texlive/2024/texmf-dist/tex/generic/iftex/ifluatex.sty
+)) (d:/texlive/2024/texmf-dist/tex/generic/iftex/ifluatex.sty
 Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
-)) (e:/Env/texlive/2024/texmf-dist/tex/generic/xstring/xstring.sty (e:/Env/texlive/2024/texmf-dist/tex/generic/xstring/xstring.tex
+)) (d:/texlive/2024/texmf-dist/tex/generic/xstring/xstring.sty (d:/texlive/2024/texmf-dist/tex/generic/xstring/xstring.tex
 \xs_counta=\count324
 \xs_countb=\count325
 )
 Package: xstring 2023/08/22 v1.86 String manipulations (CT)
-) (e:/Env/texlive/2024/texmf-dist/tex/latex/framed/framed.sty
+) (d:/texlive/2024/texmf-dist/tex/latex/framed/framed.sty
 Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \OuterFrameSep=\skip62
 \fb@frw=\dimen194
 \fb@frh=\dimen195
 \FrameRule=\dimen196
 \FrameSep=\dimen197
-) (e:/Env/texlive/2024/texmf-dist/tex/latex/float/float.sty
+) (d:/texlive/2024/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count326
 \float@exts=\toks20
@@ -344,25 +344,25 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 )
 runsystem(if not exist _minted-template mkdir _minted-template)...executed.
 
- (e:/Env/texlive/2024/texmf-dist/tex/latex/graphics/color.sty
+ (d:/texlive/2024/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2022/01/06 v1.3d Standard LaTeX Color (DPC)
- (e:/Env/texlive/2024/texmf-dist/tex/latex/graphics-cfg/color.cfg
+ (d:/texlive/2024/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: xetex.def on input line 149.
- (e:/Env/texlive/2024/texmf-dist/tex/latex/graphics-def/xetex.def
+ (d:/texlive/2024/texmf-dist/tex/latex/graphics-def/xetex.def
 File: xetex.def 2022/09/22 v5.0n Graphics/color driver for xetex
-) (e:/Env/texlive/2024/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+) (d:/texlive/2024/texmf-dist/tex/latex/graphics/mathcolor.ltx))
 
 Package fontspec Info: Font family 'JetBrainsMono-Medium.ttf(0)' created for
 (fontspec)             font 'JetBrainsMono-Medium.ttf' with options
-(fontspec)             [WordSpace={1,0,0},HyphenChar=None,PunctuationSpace=WordSpace,Path=C:/Users/21988/AppData/Local/Microsoft/Windows/Fonts/].
+(fontspec)             [WordSpace={1,0,0},HyphenChar=None,PunctuationSpace=WordSpace,Path=C:/Users/Administrator/AppData/Local/Microsoft/Windows/Fonts/].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->"[C:/Users/21988/AppData/Local/Microsoft/Windows/Fonts/JetBrainsMono-Medium.ttf]/OT:script=latn;language=dflt;"
+(fontspec)             <->"[C:/Users/Administrator/AppData/Local/Microsoft/Windows/Fonts/JetBrainsMono-Medium.ttf]/OT:script=latn;language=dflt;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 (fontspec)             and font adjustment code:
 (fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
@@ -548,40 +548,46 @@ Package fontspec Info: Font family 'FangSong(0)' created for font 'FangSong'
 (fontspec)             <->"FangSong/OT:script=hani;language=dflt;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 
-) (./_minted-template/42FCA88CBF56BFD143AEBF533CC731422FCA1CBAF44F5F369361847A6C2EA452.pygtex
+)
+runsystem(pygmentize -l "cpp" -f latex -P commandprefix=PYG -F tokenmerge -P stripnl="False" -o _minted-template/B3FDD327676027BAE92563781509AF256FAB3E2C71A890EFAD2F79A865562CA4.pygtex ../template_offline.cpp)...executed.
+
+ (./_minted-template/B3FDD327676027BAE92563781509AF256FAB3E2C71A890EFAD2F79A865562CA4.pygtex
 
 LaTeX Font Warning: Font shape `TU/JetBrainsMono-Medium.ttf(0)/m/it' undefined
 (Font)              using `TU/JetBrainsMono-Medium.ttf(0)/m/n' instead on input line 2.
 
-) (./_minted-template/7487F528C31FC262AD67854F95FFDF2EA2789B41F9F5EDC689D26AF0848F2698.pygtex [2]
+) (./_minted-template/6277E10C374F2086281BA6B9898039EFA2789B41F9F5EDC689D26AF0848F2698.pygtex [2]
 
 LaTeX Font Warning: Font shape `TU/FangSong(0)/m/it' undefined
 (Font)              using `TU/FangSong(0)/m/n' instead on input line 16.
 
-) (./_minted-template/CF20B83D6A3891E9E2D95E6620A22EF57B39F7C6049B02354327AB2740821EE0.pygtex) (./_minted-template/0D57DEC37FCAF529DBC466456349998BE6CC85E526652B206876666762302146.pygtex [3]) (./_minted-template/AF0DAB8388233BBC533D4504E7FE0E0EBD4A897F8B7BE7A9732D5E1088332E54.pygtex) (./_minted-template/9D93BBEC74F0B12DCE6E6D0B454483DD18DC3D9A35E6E89D0E9977AAD96955F2.pygtex [4]) (./_minted-template/78D4BC1F7DE9EC98EFCAB6811572123552B103F176F4A290F6350510A3FFC037.pygtex [5])
+) (./_minted-template/CF20B83D6A3891E9E2D95E6620A22EF57B39F7C6049B02354327AB2740821EE0.pygtex) (./_minted-template/0D57DEC37FCAF529DBC466456349998BE6CC85E526652B206876666762302146.pygtex [3]) (./_minted-template/AF0DAB8388233BBC533D4504E7FE0E0EBD4A897F8B7BE7A9732D5E1088332E54.pygtex) (./_minted-template/95A788BF151F9B16FDA46663BFACB68618DC3D9A35E6E89D0E9977AAD96955F2.pygtex [4]) (./_minted-template/78D4BC1F7DE9EC98EFCAB6811572123552B103F176F4A290F6350510A3FFC037.pygtex [5])
 \openout3 = `template.pyg'.
 
- (./_minted-template/BC186BC5D49304DCF7A6626F3E16B087D08AEF7AC69A6AE6D28204C7A039EB16.pygtex [6])
+ (./_minted-template/EEB4BF6EE142E44441367F537321C115D08AEF7AC69A6AE6D28204C7A039EB16.pygtex [6])
 \openout3 = `template.pyg'.
 
- (./_minted-template/C4D1845B4A7380F92193B73A01D3B392D08AEF7AC69A6AE6D28204C7A039EB16.pygtex [7]) (./_minted-template/8B1CADF39265A36B8572E6F8F93E1192EB3B2AACB39DE706EA0AB154A525F482.pygtex
+ (./_minted-template/BC186BC5D49304DCF7A6626F3E16B087D08AEF7AC69A6AE6D28204C7A039EB16.pygtex) (./_minted-template/74232FAA223D8419386348F537F836EC52171B98FAB4E0B5BE8123DD8D092283.pygtex
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <9> on input line 4.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 4.
- [8]) (./_minted-template/54D2F14A8FEDC0C5D14B061F263F32B65E0A9661F6AF789C05C522461E4ED47C.pygtex [9]) (./_minted-template/8B1CADF39265A36B8572E6F8F93E1192EB3B2AACB39DE706EA0AB154A525F482.pygtex [10]) (./_minted-template/36CC3B44C66B3E677032E0D9CD5C0154AB80C6055D8C875FAA2F21562007D903.pygtex [11] [12]) (./_minted-template/0CFDFE97121472AF3EDF449554623DF6A5DB0BFAFBB3048E3062002EAC8E3A1B.pygtex [13] [14])
+ [7]) (./_minted-template/C5767D3133C56EF6C64CECC45CFFEC90EB3B2AACB39DE706EA0AB154A525F482.pygtex [8]) (./_minted-template/54D2F14A8FEDC0C5D14B061F263F32B65E0A9661F6AF789C05C522461E4ED47C.pygtex [9]) (./_minted-template/C5767D3133C56EF6C64CECC45CFFEC90EB3B2AACB39DE706EA0AB154A525F482.pygtex [10] [11]) (./_minted-template/34D51877B609BC8F9A73544B5129E9DAAB80C6055D8C875FAA2F21562007D903.pygtex [12]) (./_minted-template/930168CD33806E4ABE34316D9B1A0315A5DB0BFAFBB3048E3062002EAC8E3A1B.pygtex [13] [14])
 \openout3 = `template.pyg'.
 
- (./_minted-template/BCA84F3DC7B2498C56023D74A1C12741D08AEF7AC69A6AE6D28204C7A039EB16.pygtex [15]) (./_minted-template/A1C4568532D7604EE2F3325F312FDD6AADCC0FC9B782215B4A4B46D79CCC5BBA.pygtex) (./_minted-template/F5C4574DFB9862C4EF700BD2FCAD089AE2D584BFCAEBC27A6CB47A2019E11FD3.pygtex [16] [17] [18] [19] [20] [21]) (./_minted-template/B878749E32C42F3959A257E4C11ADDD541EEEF59E7F2D421AB4D938D3F2D1C53.pygtex [22] [23]
-Missing character: There is no ∠ (U+2220) in font [C:/Users/21988/AppData/Local/Microsoft/Windows/Fonts/JetBrainsMono-Medium.ttf]/OT:script=latn;language=dflt;!
-Missing character: There is no ∠ (U+2220) in font [C:/Users/21988/AppData/Local/Microsoft/Windows/Fonts/JetBrainsMono-Medium.ttf]/OT:script=latn;language=dflt;!
+ (./_minted-template/BCA84F3DC7B2498C56023D74A1C12741D08AEF7AC69A6AE6D28204C7A039EB16.pygtex [15]) (./_minted-template/A1C4568532D7604EE2F3325F312FDD6AADCC0FC9B782215B4A4B46D79CCC5BBA.pygtex [16]) (./_minted-template/3B410E452D490C3637D2A4F55E7BF3E4E2D584BFCAEBC27A6CB47A2019E11FD3.pygtex [17] [18] [19] [20] [21]) (./_minted-template/B878749E32C42F3959A257E4C11ADDD541EEEF59E7F2D421AB4D938D3F2D1C53.pygtex [22] [23]
+Missing character: There is no ∠ (U+2220) in font [C:/Users/Administrator/AppData/Local/Microsoft/Windows/Fonts/JetBrainsMono-Medium.ttf]/OT:script=latn;language=dflt;!
+Missing character: There is no ∠ (U+2220) in font [C:/Users/Administrator/AppData/Local/Microsoft/Windows/Fonts/JetBrainsMono-Medium.ttf]/OT:script=latn;language=dflt;!
 [24] [25] [26])
 \openout3 = `template.pyg'.
 
- (./_minted-template/96C31B75AA00091849A4C1F729B9F370D08AEF7AC69A6AE6D28204C7A039EB16.pygtex) (./_minted-template/9F13C07D599241067D91519E9B71A397.pygtex [27] [28])
+ (./_minted-template/16A518AE35F173AA8F2530057E4A2681D08AEF7AC69A6AE6D28204C7A039EB16.pygtex) (./_minted-template/9F13C07D599241067D91519E9B71A397.pygtex [27] [28])
 \openout3 = `template.pyg'.
 
- (./_minted-template/FBF4240838CDD745B15B5EF18FF355FED08AEF7AC69A6AE6D28204C7A039EB16.pygtex) [29] (./template.aux)
+ (./_minted-template/FBF4240838CDD745B15B5EF18FF355FED08AEF7AC69A6AE6D28204C7A039EB16.pygtex)
+runsystem(del _minted-template\C6329FA28BD7AF2184697D65843DE85D2FCA1CBAF44F5F369361847A6C2EA452.pygtex)...executed.
+
+ [29] (./template.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2022/07/14>
@@ -594,12 +600,12 @@ runsystem(del template.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 11281 strings out of 474773
- 300690 string characters out of 5759508
+ 11291 strings out of 474773
+ 301071 string characters out of 5761288
  1949842 words of memory out of 5000000
- 33166 multiletter control sequences out of 15000+600000
+ 33173 multiletter control sequences out of 15000+600000
  562847 words of font info for 97 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 93i,8n,97p,868b,757s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 93i,8n,97p,868b,763s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on template.pdf (29 pages).

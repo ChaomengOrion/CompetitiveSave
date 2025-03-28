@@ -11,7 +11,7 @@ i64 binpow(i64 a, i64 b) {
     return res;
 }
 
-long long f(long long n, long long m) {
+i64 f(i64 n, i64 m) {
     // 求的是m个n相乘，这里n是一个正整数
     if (m == 0)
         return 1;

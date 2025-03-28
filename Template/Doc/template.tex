@@ -9,7 +9,7 @@
 \newcommand{\cpp}[1]{\inputminted[frame=single, linenos=true]{cpp}{#1}}
 
 \geometry{a4paper, scale=0.8}
-\setmonofont[Path=C:/Users/21988/AppData/Local/Microsoft/Windows/Fonts/]{JetBrainsMono-Medium.ttf}
+\setmonofont[Path=C:/Users/Administrator/AppData/Local/Microsoft/Windows/Fonts/]{JetBrainsMono-Medium.ttf}
 \usemintedstyle{autumn}
 \setminted{fontsize=\small, breaklines=true, breakautoindent=true}
 
@@ -29,16 +29,16 @@
 
         \subsection{Cpp模板}
         注意题目是不是多组样例
-        \cpp{../template.cpp}
+        \cpp{../template_offline.cpp}
 
     \section{算法}
         \subsection{快速幂}
         \cpp{../快速幂.cpp}
 
         \subsection{DP}
-        \subsubsection{LIS}
+        \subsubsection{LIS (最长上升子序列)}
         \cpp{../LIS.cpp}
-        \subsubsection{LIS}
+        \subsubsection{LCS (最长公共子序列)}
         \cpp{../LCS.cpp}
         \subsubsection{01背包}
         \cpp{../0_1_背包.cpp}
@@ -46,6 +46,33 @@
         \cpp{../完全背包.cpp}
         \subsubsection{多重背包}
         \cpp{../多重背包.cpp}
+
+        \subsubsection{状压dp}
+        K国王
+        \begin{minted}[frame=single, linenos=true]{cpp}
+void solve() {
+    int N, K;
+    std::cin >> N >> K;
+    int limit = 1 << N;
+    std::vector dp(N + 1, std::vector(K + 1, std::vector<i64>(limit)));
+    dp[0][0][0] = 1;
+    for (int row = 0; row < N; row++) {
+        for (int k = 0; k <= K; k++) {
+            for (int st = 0; st < limit; st++) { // 枚举原状态
+                if (dp[row][k][st] == 0) continue; // 跳过非法状态
+                for (int nst = 0; nst < limit; nst++) { // 枚举新状态
+                    if ((nst << 1) & nst) continue; // 新的一行不能相邻
+                    if (nst & ((st << 1) | st | (st >> 1))) continue; // 与原来的一行也不能相邻
+                    int cnt = std::popcount<unsigned int>(nst); // 这个状态新增了多少个国王
+                    if (k + cnt > K) continue;
+                    dp[row + 1][k + cnt][nst] += dp[row][k][st]; // 下一行这个状态加上原来的方案数
+                }
+            }
+        }
+    }
+    std::cout << std::accumulate(dp[N][K].begin(), dp[N][K].end(), 0LL) << '\n';
+}
+        \end{minted}
 
         \subsection{二维差分}
         \begin{minted}[frame=single, linenos=true]{cpp}
@@ -86,30 +113,7 @@ void best()
         \end{minted}
 
         \subsection{并查集}
-        \begin{minted}[frame=single, linenos=true]{cpp}
-void solve()
-{
-    int N, M;
-    std::cin >> N >> M;
-    std::vector<int> fa(N + 1);
-    for (int i = 0; i <= N; i++) {
-        fa[i] = i;
-    }
-    auto find = [&](auto&& find, int x) -> int {
-        return x == fa[x] ? x : fa[x] = find(find, fa[x]);
-    };
-
-    while (M--) {
-        int Z, X, Y;
-        std::cin >> Z >> X >> Y;
-        if (Z == 1) {
-            fa[find(find, Y)] = fa[find(find, X)];
-        } else if (Z == 2) {
-            std::cout << (fa[find(find, Y)] == fa[find(find, X)] ? 'Y' : 'N') << std::endl;
-        }
-    }
-}
-        \end{minted}
+        \cpp{../DSU.cpp}
 
         \subsection{图论}
         \subsubsection{最短路(Dijkstra)}
@@ -186,20 +190,17 @@ i64 add(i64 a, i64 b, i64 p) { // 加
 }
 
 i64 sub(i64 a, i64 b, i64 p) { // 减
-    return (a % p - b % p) % p;
+    return (a % p - b % p + p) % p;
 }
 
 i64 mul(i64 a, i64 b, i64 p) { // a > p 乘
-    a %= p;
-    b %= p;
+    a %= p; b %= p;
     i64 ans = 0;
     while (b > 0) {
         if (b & 1) {
-            ans += a;
-            ans %= p;
+            ans += a; ans %= p;
         }
-        a <<= 1;
-        a %= p;
+        a <<= 1; a %= p;
         b >>= 1;
     }
     return ans;

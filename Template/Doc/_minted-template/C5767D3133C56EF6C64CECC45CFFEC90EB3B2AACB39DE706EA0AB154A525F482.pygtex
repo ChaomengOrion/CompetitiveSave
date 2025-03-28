@@ -31,7 +31,7 @@
 \PYG{+w}{        }\PYG{n}{cnt}\PYG{o}{++}\PYG{p}{;}
 \PYG{+w}{        }\PYG{k}{for}\PYG{+w}{ }\PYG{p}{(}\PYG{k}{auto}\PYG{+w}{ }\PYG{p}{[}\PYG{n}{son}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{cost}\PYG{p}{]}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{n}{graph}\PYG{p}{[}\PYG{n}{x}\PYG{p}{].}\PYG{n}{to}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
 \PYG{+w}{            }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{graph}\PYG{p}{[}\PYG{n}{son}\PYG{p}{].}\PYG{n}{visit}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{continue}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{//? 可省略，下一个if也会筛掉，不过最小生成树时候不能删}
-\PYG{+w}{            }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{graph}\PYG{p}{[}\PYG{n}{x}\PYG{p}{].}\PYG{n}{dis}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{cost}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{n}{graph}\PYG{p}{[}\PYG{n}{son}\PYG{p}{].}\PYG{n}{dis}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{c+c1}{// 松弛边}
+\PYG{+w}{            }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{graph}\PYG{p}{[}\PYG{n}{son}\PYG{p}{].}\PYG{n}{dis}\PYG{+w}{ }\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n}{graph}\PYG{p}{[}\PYG{n}{x}\PYG{p}{].}\PYG{n}{dis}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{cost}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{c+c1}{// 松弛边}
 \PYG{+w}{                }\PYG{n}{graph}\PYG{p}{[}\PYG{n}{son}\PYG{p}{].}\PYG{n}{dis}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{graph}\PYG{p}{[}\PYG{n}{x}\PYG{p}{].}\PYG{n}{dis}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{cost}\PYG{p}{;}
 \PYG{+w}{                }\PYG{n}{Q}\PYG{p}{.}\PYG{n}{emplace}\PYG{p}{(}\PYG{n}{graph}\PYG{p}{[}\PYG{n}{x}\PYG{p}{].}\PYG{n}{dis}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{cost}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{son}\PYG{p}{);}
 \PYG{+w}{            }\PYG{p}{\PYGZcb{}}
